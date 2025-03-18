@@ -1,0 +1,27 @@
+
+# robots.txt pour Vitalia.tn
+# Mars 2025
+
+User-agent: *
+Allow: /
+Allow: /services.html
+Allow: /dr-anis-jday.html
+Allow: /about.html
+Allow: /testimonials.html
+Allow: /contact.html
+
+# Priorité aux pages clés
+Allow: /services/amincissement-medicalise
+Allow: /services/cellu-m6
+Allow: /services/lipocryolyse
+Allow: /services/i-motion
+Allow: /services/omeoenergetica
+
+# Plan du site
+Sitemap: https://vitalia.tn/sitemap.xml
+
+# Désactiver l'indexation des éléments non nécessaires
+Disallow: /css/
+Disallow: /js/
+Disallow: /.htaccess
+Disallow: /assets/
