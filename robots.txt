@@ -1,6 +1,7 @@
 
 # robots.txt pour Vitalia.tn
-# Mars 2025
+# Version: 2025.1
+# Dernière mise à jour: Mars 2025
 
 User-agent: *
 Allow: /
@@ -24,4 +25,9 @@ Sitemap: https://vitalia.tn/sitemap.xml
 Disallow: /css/
 Disallow: /js/
 Disallow: /.htaccess
-Disallow: /assets/
+Disallow: /assets/raw/
+Disallow: /test/
+Disallow: /temp/
+Disallow: /*?
+
+

@@ -7,9 +7,9 @@
 /* ===== VARIABLES ===== */
 :root {
   /* Couleurs principales */
-  --primary-color: #4ea685; /* Vert principal */
-  --secondary-color: #3d8bae; /* Bleu secondaire */
-  --accent-color: #ff6b6b; /* Accent pour CTA */
+  --primary-color: #4ea685;
+  --secondary-color: #3d8bae;
+  --accent-color: #ff6b6b;
 
   /* Nuances neutres */
   --white: #ffffff;
