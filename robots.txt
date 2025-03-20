@@ -1,5 +1,5 @@
 
-# robots.txt pour Vitalia.tn
+# robots.txt pour centrevitalia.com
 # Version: 2025.1
 # Dernière mise à jour: Mars 2025
 
@@ -19,7 +19,7 @@ Allow: /services/i-motion
 Allow: /services/omeoenergetica
 
 # Plan du site
-Sitemap: https://vitalia.tn/sitemap.xml
+Sitemap: https://centrevitalia.com/sitemap.xml
 
 # Désactiver l'indexation des éléments non nécessaires
 Disallow: /css/
@@ -29,5 +29,6 @@ Disallow: /assets/raw/
 Disallow: /test/
 Disallow: /temp/
 Disallow: /*?
+
 
 

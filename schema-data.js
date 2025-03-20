@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: "Vitalia - Centre d'Amincissement",
-    url: "https://vitalia.tn/",
-    logo: "https://vitalia.tn/assets/logo.svg",
-    image: "https://vitalia.tn/assets/hero.svg",
+    url: "https://centrevitalia.com/",
+    logo: "https://centrevitalia.com/assets/logo.svg",
+    image: "https://centrevitalia.com/assets/hero.svg",
     description:
       "Centre d'amincissement médicalisé en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision médicale par Dr. Anis Jday.",
     address: {
