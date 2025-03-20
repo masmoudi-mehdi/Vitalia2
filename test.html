@@ -9,7 +9,7 @@
     />
     <meta
       name="keywords"
-      content="amincissement, amincissement médicalisé, Cellu M6, lipocryolyse, I.motion, omeoenergetica, centre amincissement Tunisie, Vitalia, Anis Jday"
+      content="amincissement, amincissement médicalisé, Cellu M6, lipocryolyse, I.motion, omeoenergetica, centre amincissement Tunisie, Vitalia"
     />
     <meta name="author" content="Centre d'amincissement Vitalia" />
     <meta
@@ -28,7 +28,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/comparison-slider.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -39,11 +38,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- TwentyTwenty CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.0.0/css/twentytwenty.min.css"
-    />
+    <link rel="stylesheet" href="css/stylestest.css" />
   </head>
   <body>
     <!-- Header -->
@@ -60,7 +55,6 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">À propos</a></li>
             <li><a href="testimonials.html">Témoignages</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <div class="mobile-menu-btn">
@@ -187,11 +181,11 @@
           </div>
           <div class="about-stats">
             <div class="stat-item">
-              <span class="stat-number">18+</span>
+              <span class="stat-number">10+</span>
               <span class="stat-text">Années d'expérience</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">20'000+</span>
+              <span class="stat-number">5000+</span>
               <span class="stat-text">Clients satisfaits</span>
             </div>
             <div class="stat-item">
@@ -199,7 +193,7 @@
               <span class="stat-text">Professionnels experts</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">20+</span>
+              <span class="stat-number">8+</span>
               <span class="stat-text">Techniques innovantes</span>
             </div>
           </div>
@@ -363,14 +357,167 @@
 
     <!-- Before-After Section -->
     <section id="transformations">
-      <script
-        src="https://static.elfsight.com/platform/platform.js"
-        async
-      ></script>
-      <div
-        class="elfsight-app-052f524d-e4f3-480d-820d-e55720cc6b05"
-        data-elfsight-app-lazy
-      ></div>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Transformations Réelles</h2>
+          <p>Découvrez les résultats impressionnants obtenus par nos clients</p>
+        </div>
+
+        <nav class="navbar">
+          <div class="container">
+            <a class="logo" href="#">Transformations Réussies</a>
+          </div>
+        </nav>
+
+        <header class="hero">
+          <div class="container">
+            <h1>Inspirez-vous des transformations réussies</h1>
+            <p>
+              Découvrez des histoires motivantes de personnes ayant atteint
+              leurs objectifs
+            </p>
+          </div>
+        </header>
+
+        <section class="filters">
+          <div class="container">
+            <div class="filter-group">
+              <select id="duration-filter">
+                <option value="all">Durée</option>
+                <option value="3">3 mois</option>
+                <option value="6">6 mois</option>
+                <option value="12">1 an</option>
+              </select>
+              <select id="type-filter">
+                <option value="all">Type de régime</option>
+                <option value="keto">Keto</option>
+                <option value="balanced">Équilibré</option>
+                <option value="vegetarian">Végétarien</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <main class="transformations">
+          <div class="container">
+            <div class="transformation-grid">
+              <!-- Transformation 1 -->
+              <div
+                class="transformation-card"
+                data-duration="6"
+                data-type="balanced"
+              >
+                <div class="comparison-slider">
+                  <img
+                    class="before-image"
+                    src="https://images.unsplash.com/photo-1535231540604-72e8fbaf8cdb"
+                    alt="Avant"
+                  />
+                  <img
+                    class="after-image"
+                    src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6"
+                    alt="Après"
+                  />
+                  <div class="slider-handle"></div>
+                </div>
+                <div class="card-content">
+                  <h3>Marie, 32 ans</h3>
+                  <p>Transformation en 6 mois avec un régime équilibré</p>
+                </div>
+              </div>
+
+              <!-- Transformation 2 -->
+              <div
+                class="transformation-card"
+                data-duration="3"
+                data-type="keto"
+              >
+                <div class="comparison-slider">
+                  <img
+                    class="before-image"
+                    src="https://images.unsplash.com/photo-1515776660074-a40fda5db287"
+                    alt="Avant"
+                  />
+                  <img
+                    class="after-image"
+                    src="https://images.unsplash.com/photo-1499244571948-7ccddb3583f1"
+                    alt="Après"
+                  />
+                  <div class="slider-handle"></div>
+                </div>
+                <div class="card-content">
+                  <h3>Pierre, 28 ans</h3>
+                  <p>Transformation en 3 mois avec régime keto</p>
+                </div>
+              </div>
+
+              <!-- Transformation 3 -->
+              <div
+                class="transformation-card"
+                data-duration="12"
+                data-type="vegetarian"
+              >
+                <div class="comparison-slider">
+                  <img
+                    class="before-image"
+                    src="https://images.unsplash.com/photo-1671722559130-bd450d38ca9a"
+                    alt="Avant"
+                  />
+                  <img
+                    class="after-image"
+                    src="https://images.unsplash.com/photo-1605622713668-fc5d98d5becc"
+                    alt="Après"
+                  />
+                  <div class="slider-handle"></div>
+                </div>
+                <div class="card-content">
+                  <h3>Sophie, 35 ans</h3>
+                  <p>Transformation en 1 an avec régime végétarien</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <section class="motivation">
+          <div class="container">
+            <h2>Motivation</h2>
+            <div class="motivation-grid">
+              <img
+                src="https://images.unsplash.com/photo-1518644961665-ed172691aaa1"
+                alt="Motivation"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1518310383802-640c2de311b2"
+                alt="Motivation"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1483721310020-03333e577078"
+                alt="Motivation"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a"
+                alt="Motivation"
+              />
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="container">
+            <p>&copy; 2024 Transformations Réussies. Tous droits réservés.</p>
+          </div>
+        </footer>
+
+        <script src="js/comparison-slider.js"></script>
+        <script src="js/main.js"></script>
+
+        <div class="cta-button-container">
+          <a href="services.html" class="button"
+            >Voir plus de transformations</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
@@ -447,6 +594,9 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/before-after.js"></script>
     <script src="schema-data.js"></script>
+    <script src="js/comparison-slidertest.js"></script>
+    <script src="js/mainTest.js"></script>
   </body>
 </html>
