@@ -108,6 +108,27 @@
   body.menu-open {
     overflow: hidden;
   }
+
+  /* About Preview Section */
+  #about-preview .container {
+    padding: var(--spacing-lg);
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-stats {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
 }
 
 /* Small devices (phones, 576px and down) */
@@ -123,6 +144,26 @@
   .nav-menu {
     width: 100%;
     top: 60px;
+  }
+
+  #about-preview .container {
+    padding: var(--spacing-md);
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: var(--font-size-xxl);
+  }
+
+  .stat-text {
+    font-size: var(--font-size-sm);
   }
 }
 
