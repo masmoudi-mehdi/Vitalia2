@@ -216,16 +216,43 @@
     top: 60px;
   }
 
+  #about-preview {
+    padding: var(--spacing-md) 0;
+  }
+
   #about-preview .container {
-    padding: var(--spacing-md);
+    padding: 0 var(--spacing-sm);
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+    padding: 0 var(--spacing-xs);
+  }
+
+  .about-text h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-text p {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
   }
 
   .about-stats {
+    width: 100%;
     grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
   }
 
   .stat-item {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
   }
 
   .stat-number {
@@ -273,28 +300,73 @@
 }
 
 /* Extra small devices */
+@media (max-width: 412px) {
+  #about-preview .container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .about-stats {
+    gap: var(--spacing-xs);
+  }
+
+  .stat-item {
+    padding: var(--spacing-xs);
+  }
+
+  /* Footer adjustments */
+  .footer-top {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .footer-links {
+    padding: 0 var(--spacing-xs);
+  }
+
+  .footer-logo img {
+    height: 30px;
+  }
+
+  .footer-nav h4,
+  .footer-contact h4,
+  .footer-hours h4 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-nav li,
+  .footer-contact li,
+  .footer-hours li {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .social-links a {
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Specific adjustments for 375px */
 @media (max-width: 375px) {
-  /* Base */
-  :root {
-    --font-size-display: 2rem;
-    --font-size-xxxl: 1.5rem;
-    --font-size-xxl: 1.3rem;
-    --font-size-xl: 1.1rem;
+  #about-preview .container {
+    padding: 0 var(--spacing-xxs);
   }
 
-  /* Logo */
-  .logo img {
+  .about-text {
+    padding: 0;
+  }
+
+  .footer-top {
+    padding: 0 var(--spacing-xxs);
+  }
+
+  .footer-links {
+    padding: 0 var(--spacing-xxs);
+  }
+
+  .footer-logo img {
     height: 25px;
-  }
-
-  /* Hero */
-  .hero-content h1 {
-    font-size: var(--font-size-xxl);
-  }
-
-  /* Testimonial */
-  .testimonial-slider {
-    height: 500px;
   }
 }
 
