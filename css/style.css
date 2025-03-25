@@ -629,6 +629,48 @@ nav {
   align-items: center;
 }
 
+/* Ajout des styles responsives */
+@media (max-width: 768px) {
+  .expert-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .expert-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .expert-content .section-header.text-left {
+    text-align: center;
+  }
+
+  .expert-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .expert-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .expert-image {
+    max-width: 250px;
+  }
+
+  .expert-description p {
+    font-size: var(--font-size-sm);
+  }
+}
+
 .expert-image img {
   width: 100%;
   border-radius: var(--border-radius-lg);
