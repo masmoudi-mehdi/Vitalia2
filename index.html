@@ -2,73 +2,44 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <!-- Favicons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Centre d'amincissement médicalisé Vitalia en Tunisie - Experts en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions professionnelles d'amincissement sous supervision médicale."
-    />
-    <meta
-      name="keywords"
-      content="amincissement, amincissement médicalisé, Cellu M6, lipocryolyse, I.motion, omeoenergetica, centre amincissement Tunisie, Vitalia, Anis Jday"
-    />
-    <meta name="author" content="Centre d'amincissement Vitalia" />
-    <meta
-      property="og:title"
-      content="Vitalia - Centre d'Amincissement en Tunisie | Dr. Anis Jday"
-    />
-    <meta
-      property="og:description"
-      content="Solutions professionnelles pour la perte de poids, raffermissement et bien-être en Tunisie. Consultations avec Dr. Anis Jday, expert en nutrition médicale."
-    />
-    <meta property="og:image" content="assets/logo.png" />
-    <meta property="og:url" content="https://centrevitalia.com/" />
-    <meta property="og:type" content="website" />
-    <title>Vitalia - Centre d'Amincissement en Tunisie | Dr. Anis Jday</title>
-    <link rel="canonical" href="https://centrevitalia.com/" />
 
-    <!-- CSS -->
+    <!-- Vos CSS actuels - NE PAS LES SUPPRIMER -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/services-update.css" />
 
-    <!-- Font Awesome -->
+    <!-- Ajout de Tailwind en parallèle -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        // Désactiver le reset CSS de Tailwind
+        corePlugins: {
+          preflight: false,
+        },
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4ea685",
+              secondary: "#3d8bae",
+              accent: "#ff6b6b",
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Autres ressources -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-    />
-
-    <!-- TwentyTwenty CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.0.0/css/twentytwenty.min.css"
     />
   </head>
   <body>
@@ -97,26 +68,47 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1>Transformez votre corps, <span>transformez votre vie</span></h1>
-          <p>
-            Chez Vitalia, nous vous accompagnons dans votre parcours
-            d'amincissement avec des solutions personnalisées et efficaces pour
-            atteindre vos objectifs.
-          </p>
-          <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
+    <section
+      class="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-gray-50 to-white"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+            <h1
+              class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
             >
-            <a href="services.html" class="btn btn-secondary"
-              >Découvrir nos services</a
+              Transformez votre corps,
+              <span class="text-primary">transformez votre vie</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8">
+              Chez Vitalia, nous vous accompagnons dans votre parcours
+              d'amincissement avec des solutions personnalisées et efficaces
+              pour atteindre vos objectifs.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
+              <a
+                href="contact.html"
+                class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-colors"
+              >
+                Prendre rendez-vous
+              </a>
+              <a
+                href="services.html"
+                class="bg-white hover:bg-gray-50 text-primary border border-primary font-medium py-3 px-8 rounded-lg transition-colors"
+              >
+                Découvrir nos services
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/logo.png" alt="Vitalia Centre d'amincissement" />
+          <div class="w-full md:w-1/2">
+            <img
+              src="assets/logo.png"
+              alt="Vitalia Centre d'amincissement"
+              class="max-w-md mx-auto"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -196,7 +188,7 @@
             <h2>Qui sommes-nous ?</h2>
             <p>
               Vitalia est un centre d'amincissement de premier plan en Tunisie,
-              dédié à aider nos clients à atteindre leurs objectifs de perte de
+              dédié à aider nos curistes à atteindre leurs objectifs de perte de
               poids et de bien-être.
             </p>
             <p>
@@ -215,7 +207,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-number">20'000+</span>
-              <span class="stat-text">Clients satisfaits</span>
+              <span class="stat-text">curistes satisfaits</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">15+</span>
@@ -258,7 +250,7 @@
               <p>
                 Son approche unique combine les dernières avancées médicales
                 avec une vision holistique du bien-être, garantissant des
-                résultats exceptionnels et durables pour tous nos clients.
+                résultats exceptionnels et durables pour tous nos curistes.
               </p>
               <div class="expert-credentials">
                 <span class="credential"
@@ -292,8 +284,8 @@
     <section id="home-testimonials">
       <div class="container">
         <div class="section-header">
-          <h2>Témoignages clients</h2>
-          <p>Ce que nos clients disent de nous</p>
+          <h2>Témoignages curistes</h2>
+          <p>Ce que nos curistes disent de nous</p>
         </div>
         <div class="testimonial-slider">
           <div class="testimonial-slide active">
