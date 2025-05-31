@@ -12,7 +12,7 @@ Allow: /testimonials.html
 Allow: /contact.html
 
 # Priorité aux pages clés
-Allow: /services/amincissement-medicalise
+Allow: /services/amincissement-professionnel
 Allow: /services/cellu-m6
 Allow: /services/lipocryolyse
 Allow: /services/i-motion

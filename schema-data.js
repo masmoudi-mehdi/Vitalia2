@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Schéma pour l'organisation
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "HealthAndBeautyBusiness",
     name: "Vitalia - Centre d'Amincissement",
     url: "https://centrevitalia.com/",
     logo: "https://centrevitalia.com/assets/logo.svg",
     image: "https://centrevitalia.com/assets/hero.svg",
     description:
-      "Centre d'amincissement médicalisé en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision médicale par Dr. Anis Jday.",
+      "Centre d'amincissement professionnel en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision professionnelle par Expert Anis Jday.",
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -48,34 +48,34 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   };
 
-  // Schéma pour le Dr. Anis Jday
-  const doctorSchema = {
+  // Schéma pour Expert Anis Jday
+  const expertSchema = {
     "@context": "https://schema.org",
-    "@type": "Physician",
-    name: "Dr. Anis Jday",
+    "@type": "Person",
+    name: "Expert Anis Jday",
     image: "https://vitalia.tn/assets/team/dr-anis-jday.jpg",
     description:
-      "Référence en amincissement médical et nutrition en Tunisie avec plus de 15 ans d'expérience",
+      "Référence en amincissement professionnel et nutrition en Tunisie avec plus de 15 ans d'expérience",
     url: "https://vitalia.tn/dr-anis-jday.html",
-    jobTitle: "Médecin spécialiste en nutrition médicale",
+    jobTitle: "Expert en nutrition professionnelle",
     worksFor: {
-      "@type": "MedicalBusiness",
+      "@type": "HealthAndBeautyBusiness",
       name: "Vitalia - Centre d'Amincissement",
       url: "https://vitalia.tn/",
     },
-    medicalSpecialty: ["Weight Management", "Nutrition", "Obesity Medicine"],
+    knowsAbout: ["Weight Management", "Nutrition", "Wellness Programs"],
     availableService: [
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         name: "Programmes d'amincissement personnalisés",
       },
       {
-        "@type": "MedicalProcedure",
-        name: "Consultation en nutrition médicale",
+        "@type": "Service",
+        name: "Entretien en nutrition professionnelle",
       },
       {
-        "@type": "MedicalProcedure",
-        name: "Traitement des troubles métaboliques",
+        "@type": "Service",
+        name: "Programmes de bien-être métabolique",
       },
     ],
   };
@@ -83,30 +83,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // Schéma pour les services
   const servicesSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "WebPage",
     name: "Services d'amincissement Vitalia",
     url: "https://vitalia.tn/services.html",
     description:
       "Solutions d'amincissement personnalisées incluant perte de poids, raffermissement, bien-être et suivi sur mesure",
     about: {
-      "@type": "MedicalBusiness",
+      "@type": "HealthAndBeautyBusiness",
       name: "Vitalia - Centre d'Amincissement",
       url: "https://vitalia.tn/",
     },
     mainContentOfPage: [
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         name: "Programme de perte de poids",
         description:
           "Solutions personnalisées pour une perte de poids saine et durable",
-        followup: "Suivi personnalisé par des experts",
+        provider: "Suivi personnalisé par des experts",
       },
       {
-        "@type": "MedicalProcedure",
+        "@type": "Service",
         name: "Raffermissement",
         description:
           "Techniques avancées pour raffermir votre corps et tonifier votre peau",
-        followup: "Résultats visibles et durables",
+        provider: "Résultats visibles et durables",
       },
     ],
   };
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentURL.includes("dr-anis-jday") ||
     currentURL === "/dr-anis-jday.html"
   ) {
-    injectSchema(doctorSchema);
+    injectSchema(expertSchema);
   } else if (
     currentURL.includes("services") ||
     currentURL === "/services.html"
