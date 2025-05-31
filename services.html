@@ -11,6 +11,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css" />
     <link rel="stylesheet" href="css/services-update.css" />
     <!-- Font Awesome -->
     <link
@@ -24,6 +26,9 @@
     />
   </head>
   <body>
+    <!-- Skip link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -33,7 +38,12 @@
           </a>
         </div>
         <nav>
-          <ul class="nav-menu">
+          <ul
+            class="nav-menu"
+            id="nav-menu"
+            role="navigation"
+            aria-label="Menu principal"
+          >
             <li><a href="index.html">Accueil</a></li>
             <li><a href="services.html" class="active">Services</a></li>
             <li><a href="about.html">À propos</a></li>
@@ -41,616 +51,643 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="mobile-menu-btn">
+          <button
+            class="mobile-menu-btn"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
             <i class="fas fa-bars"></i>
-          </div>
+            <span class="sr-only">Menu</span>
+          </button>
         </nav>
       </div>
     </header>
 
     <!-- Page Banner -->
-    <section id="page-banner">
-      <div class="container">
-        <h1>Nos Services</h1>
-        <p>
-          Des solutions d'amincissement sur mesure pour des résultats durables
-        </p>
-      </div>
-    </section>
-
-    <!-- Services Introduction -->
-    <section id="services-intro">
-      <div class="container">
-        <div class="section-header">
-          <h2>Solutions professionnelles d'amincissement</h2>
+    <main id="main-content">
+      <section id="page-banner">
+        <div class="container">
+          <h1>Nos Services</h1>
           <p>
-            Chez Vitalia, nous proposons une gamme complète de services pour
-            vous aider à atteindre vos objectifs de bien-être et de forme
-            physique
+            Des solutions d'amincissement sur mesure pour des résultats durables
           </p>
         </div>
-        <div class="services-approach">
-          <div class="approach-item">
-            <div class="approach-icon">
-              <i class="fas fa-user-check"></i>
-            </div>
-            <h3>Approche personnalisée</h3>
+      </section>
+
+      <!-- Services Introduction -->
+      <section id="services-intro">
+        <div class="container">
+          <div class="section-header">
+            <h2>Solutions professionnelles d'amincissement</h2>
             <p>
-              Chaque programme est adapté à vos besoins, votre morphologie et
-              vos objectifs spécifiques
+              Chez Vitalia, nous proposons une gamme complète de services pour
+              vous aider à atteindre vos objectifs de bien-être et de forme
+              physique
             </p>
           </div>
-          <div class="approach-item">
-            <div class="approach-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <h3>Méthodes éprouvées</h3>
-            <p>
-              Nos techniques sont validées scientifiquement pour des résultats
-              visibles et durables
-            </p>
-          </div>
-          <div class="approach-item">
-            <div class="approach-icon">
-              <i class="fas fa-user-md"></i>
-            </div>
-            <h3>Équipe de professionnels</h3>
-            <p>
-              Nos experts sont formés aux dernières techniques d'amincissement
-              et de bien-être
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nos Spécialisations -->
-    <section id="specialisations">
-      <div class="container">
-        <div class="section-header">
-          <h2>Nos Spécialisations</h2>
-          <p>
-            Une expertise complète pour répondre à tous vos besoins esthétiques
-            et de bien-être
-          </p>
-        </div>
-
-        <div class="specialisations-grid">
-          <div class="specialisation-card">
-            <div class="specialisation-icon">
-              <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <h3>Rides et vieillissement cutané</h3>
-            <p>
-              Traitement des signes de l'âge et amélioration de la qualité de la
-              peau grâce à des techniques ciblées et non-invasives.
-            </p>
-          </div>
-
-          <div class="specialisation-card">
-            <div class="specialisation-icon">
-              <i class="fas fa-child"></i>
-            </div>
-            <h3>Tonification du visage et du corps</h3>
-            <p>
-              Programmes de raffermissement pour retrouver une silhouette
-              tonique et des contours du visage plus définis.
-            </p>
-          </div>
-
-          <div class="specialisation-card">
-            <div class="specialisation-icon">
-              <i class="fas fa-weight-scale"></i>
-            </div>
-            <h3>Reprise de forme et perte de poids localisée</h3>
-            <p>
-              Solutions ciblées pour éliminer les graisses résistantes et
-              remodeler efficacement votre silhouette.
-            </p>
-          </div>
-
-          <div class="specialisation-card">
-            <div class="specialisation-icon">
-              <i class="fas fa-spa"></i>
-            </div>
-            <h3>Récupération d'énergie et bien-être</h3>
-            <p>
-              Soins holistiques pour revitaliser votre corps et votre esprit, et
-              améliorer votre bien-être général.
-            </p>
-          </div>
-
-          <div class="specialisation-card">
-            <div class="specialisation-icon">
-              <i class="fas fa-droplet"></i>
-            </div>
-            <h3>Cellulite et rétention d'eau</h3>
-            <p>
-              Traitements spécifiques pour combattre la cellulite et éliminer
-              l'eau superflue pour une peau plus lisse.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Technologies Avancées -->
-    <section id="technologies">
-      <div class="container">
-        <div class="section-header">
-          <h2>Nos Technologies de Pointe</h2>
-          <p>
-            Des équipements de dernière génération pour des résultats rapides et
-            durables
-          </p>
-        </div>
-
-        <div class="technologies-showcase">
-          <!-- Cellu M6 -->
-          <div class="technology-item">
-            <div class="technology-content">
-              <h3>Cellu M6 - La Référence en Endermologie</h3>
+          <div class="services-approach">
+            <div class="approach-item">
+              <div class="approach-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h3>Approche personnalisée</h3>
               <p>
-                Le Cellu M6 est un appareil de haute technologie mondialement
-                reconnu pour l'endermologie, une technique non invasive qui
-                permet de traiter efficacement la cellulite, le relâchement
-                cutané et la rétention d'eau.
+                Chaque programme est adapté à vos besoins, votre morphologie et
+                vos objectifs spécifiques
+              </p>
+            </div>
+            <div class="approach-item">
+              <div class="approach-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>Méthodes éprouvées</h3>
+              <p>
+                Nos techniques sont validées scientifiquement pour des résultats
+                visibles et durables
+              </p>
+            </div>
+            <div class="approach-item">
+              <div class="approach-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Équipe de professionnels</h3>
+              <p>
+                Nos experts sont formés aux dernières techniques d'amincissement
+                et de bien-être
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nos Spécialisations -->
+      <section id="specialisations">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nos Spécialisations</h2>
+            <p>
+              Une expertise complète pour répondre à tous vos besoins
+              esthétiques et de bien-être
+            </p>
+          </div>
+
+          <div class="specialisations-grid">
+            <div class="specialisation-card">
+              <div class="specialisation-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h3>Rides et vieillissement cutané</h3>
+              <p>
+                Traitement des signes de l'âge et amélioration de la qualité de
+                la peau grâce à des techniques ciblées et non-invasives.
+              </p>
+            </div>
+
+            <div class="specialisation-card">
+              <div class="specialisation-icon">
+                <i class="fas fa-child"></i>
+              </div>
+              <h3>Tonification du visage et du corps</h3>
+              <p>
+                Programmes de raffermissement pour retrouver une silhouette
+                tonique et des contours du visage plus définis.
+              </p>
+            </div>
+
+            <div class="specialisation-card">
+              <div class="specialisation-icon">
+                <i class="fas fa-weight-scale"></i>
+              </div>
+              <h3>Reprise de forme et perte de poids localisée</h3>
+              <p>
+                Solutions ciblées pour éliminer les graisses résistantes et
+                remodeler efficacement votre silhouette.
+              </p>
+            </div>
+
+            <div class="specialisation-card">
+              <div class="specialisation-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <h3>Récupération d'énergie et bien-être</h3>
+              <p>
+                Soins holistiques pour revitaliser votre corps et votre esprit,
+                et améliorer votre bien-être général.
+              </p>
+            </div>
+
+            <div class="specialisation-card">
+              <div class="specialisation-icon">
+                <i class="fas fa-droplet"></i>
+              </div>
+              <h3>Cellulite et rétention d'eau</h3>
+              <p>
+                Traitements spécifiques pour combattre la cellulite et éliminer
+                l'eau superflue pour une peau plus lisse.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technologies Avancées -->
+      <section id="technologies">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nos Technologies de Pointe</h2>
+            <p>
+              Des équipements de dernière génération pour des résultats rapides
+              et durables
+            </p>
+          </div>
+
+          <div class="technologies-showcase">
+            <!-- Cellu M6 -->
+            <div class="technology-item">
+              <div class="technology-content">
+                <h3>Cellu M6 - La Référence en Endermologie</h3>
+                <p>
+                  Le Cellu M6 est un appareil de haute technologie mondialement
+                  reconnu pour l'endermologie, une technique non invasive qui
+                  permet de traiter efficacement la cellulite, le relâchement
+                  cutané et la rétention d'eau.
+                </p>
+
+                <div class="technology-benefits">
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Remodelage Corporel</h4>
+                    <p>
+                      Redessine votre silhouette en ciblant précisément les
+                      zones à traiter
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Raffermissement Cutané</h4>
+                    <p>
+                      Stimule la production de collagène pour une peau plus
+                      ferme et tonique
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Drainage Lymphatique</h4>
+                    <p>
+                      Favorise l'élimination des toxines et réduit la rétention
+                      d'eau
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Anti-Âge</h4>
+                    <p>
+                      Traitement du visage pour atténuer les rides et redonner
+                      de l'éclat
+                    </p>
+                  </div>
+                </div>
+
+                <div class="technology-note">
+                  <p>
+                    Le Cellu M6 utilise des rouleaux motorisés associés à une
+                    aspiration pour masser et stimuler en profondeur les
+                    cellules de la peau, relançant ainsi leurs fonctions
+                    naturelles. Chaque séance est personnalisée selon vos
+                    besoins spécifiques.
+                  </p>
+                </div>
+              </div>
+              <img
+                src="assets/technologies/cellu-m6.jpg"
+                alt="Cellu M6"
+                class="technology-image"
+              />
+            </div>
+
+            <!-- Cellutrim 954 -->
+            <div class="technology-item reverse">
+              <div class="technology-content">
+                <h3>OMEOENERGETICA Cellutrim 954 - La Solution Innovante</h3>
+                <p>
+                  Le Cellutrim 954 est notre technologie la plus avancée, conçue
+                  pour améliorer la circulation sanguine et lymphatique et
+                  activer les processus de réparation endogènes naturellement.
+                  Particulièrement efficace lorsque d'autres méthodes échouent.
+                </p>
+
+                <div class="technology-benefits">
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Remodelage Corporel Complet</h4>
+                    <p>
+                      Transformation visible de la silhouette grâce à une action
+                      globale
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Lissage de la Peau</h4>
+                    <p>
+                      Amélioration significative de la texture et de l'aspect de
+                      la peau
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Drainage Efficace</h4>
+                    <p>
+                      Élimination des liquides en excès pour un confort immédiat
+                    </p>
+                  </div>
+                  <div class="benefit">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Réduction de la Graisse Viscérale</h4>
+                    <p>
+                      Action ciblée sur la graisse profonde, difficile à
+                      éliminer
+                    </p>
+                  </div>
+                </div>
+
+                <div class="technology-note">
+                  <p>
+                    Le Cellutrim 954 utilise l'énergie biocompatible pour
+                    induire un mouvement rapide des charges ioniques, stimulant
+                    ainsi le système circulatoire et le métabolisme. Il favorise
+                    l'oxygénation des tissus, augmente l'apport de nutriments et
+                    restaure la structure des fibres du derme.
+                  </p>
+                </div>
+              </div>
+              <img
+                src="assets/technologies/cellutrim-954.jpg"
+                alt="Cellutrim 954"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Details -->
+      <section id="service-details">
+        <div class="container">
+          <!-- Perte de poids -->
+          <div id="perte-poids" class="service-item">
+            <div class="service-image">
+              <i class="fas fa-weight-scale service-big-icon"></i>
+            </div>
+            <div class="service-content">
+              <h2>Programme de perte de poids</h2>
+              <p>
+                Notre programme de perte de poids combine plusieurs approches
+                complémentaires pour des résultats optimaux et durables. Nous
+                établissons un bilan complet et proposons un plan d'action
+                personnalisé.
               </p>
 
-              <div class="technology-benefits">
-                <div class="benefit">
+              <div class="service-features">
+                <div class="feature">
                   <i class="fas fa-check-circle"></i>
-                  <h4>Remodelage Corporel</h4>
+                  <h4>Consultation initiale approfondie</h4>
                   <p>
-                    Redessine votre silhouette en ciblant précisément les zones
-                    à traiter
+                    Analyse de la composition corporelle, des habitudes
+                    alimentaires et du mode de vie
                   </p>
                 </div>
-                <div class="benefit">
+                <div class="feature">
                   <i class="fas fa-check-circle"></i>
-                  <h4>Raffermissement Cutané</h4>
+                  <h4>Suivi nutritionnel</h4>
                   <p>
-                    Stimule la production de collagène pour une peau plus ferme
-                    et tonique
+                    Conseils et plan alimentaire équilibré adapté à vos besoins
+                    spécifiques
                   </p>
                 </div>
-                <div class="benefit">
+                <div class="feature">
                   <i class="fas fa-check-circle"></i>
-                  <h4>Drainage Lymphatique</h4>
+                  <h4>Techniques de lipolyse</h4>
                   <p>
-                    Favorise l'élimination des toxines et réduit la rétention
-                    d'eau
+                    Technologies avancées pour cibler les zones graisseuses
+                    résistantes
                   </p>
                 </div>
-                <div class="benefit">
+                <div class="feature">
                   <i class="fas fa-check-circle"></i>
-                  <h4>Anti-Âge</h4>
+                  <h4>Suivi régulier</h4>
                   <p>
-                    Traitement du visage pour atténuer les rides et redonner de
-                    l'éclat
-                  </p>
-                </div>
-              </div>
-
-              <div class="technology-note">
-                <p>
-                  Le Cellu M6 utilise des rouleaux motorisés associés à une
-                  aspiration pour masser et stimuler en profondeur les cellules
-                  de la peau, relançant ainsi leurs fonctions naturelles. Chaque
-                  séance est personnalisée selon vos besoins spécifiques.
-                </p>
-              </div>
-            </div>
-            <img
-              src="assets/technologies/cellu-m6.jpg"
-              alt="Cellu M6"
-              class="technology-image"
-            />
-          </div>
-
-          <!-- Cellutrim 954 -->
-          <div class="technology-item reverse">
-            <div class="technology-content">
-              <h3>OMEOENERGETICA Cellutrim 954 - La Solution Innovante</h3>
-              <p>
-                Le Cellutrim 954 est notre technologie la plus avancée, conçue
-                pour améliorer la circulation sanguine et lymphatique et activer
-                les processus de réparation endogènes naturellement.
-                Particulièrement efficace lorsque d'autres méthodes échouent.
-              </p>
-
-              <div class="technology-benefits">
-                <div class="benefit">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Remodelage Corporel Complet</h4>
-                  <p>
-                    Transformation visible de la silhouette grâce à une action
-                    globale
-                  </p>
-                </div>
-                <div class="benefit">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Lissage de la Peau</h4>
-                  <p>
-                    Amélioration significative de la texture et de l'aspect de
-                    la peau
-                  </p>
-                </div>
-                <div class="benefit">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Drainage Efficace</h4>
-                  <p>
-                    Élimination des liquides en excès pour un confort immédiat
-                  </p>
-                </div>
-                <div class="benefit">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Réduction de la Graisse Viscérale</h4>
-                  <p>
-                    Action ciblée sur la graisse profonde, difficile à éliminer
+                    Mesures et ajustements du programme pour garantir des
+                    résultats progressifs
                   </p>
                 </div>
               </div>
 
-              <div class="technology-note">
-                <p>
-                  Le Cellutrim 954 utilise l'énergie biocompatible pour induire
-                  un mouvement rapide des charges ioniques, stimulant ainsi le
-                  système circulatoire et le métabolisme. Il favorise
-                  l'oxygénation des tissus, augmente l'apport de nutriments et
-                  restaure la structure des fibres du derme.
-                </p>
-              </div>
-            </div>
-            <img
-              src="assets/technologies/cellutrim-954.jpg"
-              alt="Cellutrim 954"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Details -->
-    <section id="service-details">
-      <div class="container">
-        <!-- Perte de poids -->
-        <div id="perte-poids" class="service-item">
-          <div class="service-image">
-            <i class="fas fa-weight-scale service-big-icon"></i>
-          </div>
-          <div class="service-content">
-            <h2>Programme de perte de poids</h2>
-            <p>
-              Notre programme de perte de poids combine plusieurs approches
-              complémentaires pour des résultats optimaux et durables. Nous
-              établissons un bilan complet et proposons un plan d'action
-              personnalisé.
-            </p>
-
-            <div class="service-features">
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Consultation initiale approfondie</h4>
-                <p>
-                  Analyse de la composition corporelle, des habitudes
-                  alimentaires et du mode de vie
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Suivi nutritionnel</h4>
-                <p>
-                  Conseils et plan alimentaire équilibré adapté à vos besoins
-                  spécifiques
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Techniques de lipolyse</h4>
-                <p>
-                  Technologies avancées pour cibler les zones graisseuses
-                  résistantes
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Suivi régulier</h4>
-                <p>
-                  Mesures et ajustements du programme pour garantir des
-                  résultats progressifs
-                </p>
-              </div>
-            </div>
-
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-          </div>
-        </div>
-
-        <!-- Raffermissement -->
-        <div id="raffermissement" class="service-item reverse">
-          <div class="service-content">
-            <h2>Raffermissement corporel</h2>
-            <p>
-              Notre programme de raffermissement vise à tonifier la peau et à
-              remodeler silhouette après une perte de poids ou pour lutter
-              contre les effets naturels du vieillissement cutané.
-            </p>
-
-            <div class="service-features">
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Techniques de musculation passive</h4>
-                <p>Stimulation musculaire ciblée pour tonifier sans effort</p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Technologies radio-fréquence</h4>
-                <p>
-                  Traitement non-invasif pour resserrer les tissus et améliorer
-                  l'élasticité
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Massages drainants</h4>
-                <p>
-                  Techniques manuelles pour activer la circulation et raffermir
-                  les tissus
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Soins cosmétiques ciblés</h4>
-                <p>
-                  Produits professionnels pour compléter et optimiser les
-                  résultats
-                </p>
-              </div>
-            </div>
-
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-          </div>
-          <div class="service-image">
-            <i class="fas fa-person-running service-big-icon"></i>
-          </div>
-        </div>
-
-        <!-- Bien-être -->
-        <div id="bien-etre" class="service-item">
-          <div class="service-image">
-            <i class="fas fa-spa service-big-icon"></i>
-          </div>
-          <div class="service-content">
-            <h2>Soins bien-être</h2>
-            <p>
-              Nos soins de bien-être complètent votre parcours d'amincissement
-              en apportant relaxation, gestion du stress et amélioration de
-              votre état général, essentiels pour un résultat durable.
-            </p>
-
-            <div class="service-features">
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Massages relaxants</h4>
-                <p>
-                  Techniques variées pour diminuer le stress et améliorer le
-                  bien-être général
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Thérapies détoxifiantes</h4>
-                <p>
-                  Soins ciblés pour éliminer les toxines et purifier l'organisme
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Aromathérapie</h4>
-                <p>
-                  Utilisation d'huiles essentielles pour harmoniser corps et
-                  esprit
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Conseils en gestion du stress</h4>
-                <p>
-                  Techniques et recommandations pour un équilibre émotionnel
-                  favorable à la perte de poids
-                </p>
-              </div>
-            </div>
-
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-          </div>
-        </div>
-
-        <!-- Suivi personnalisé -->
-        <div id="suivi" class="service-item reverse">
-          <div class="service-content">
-            <h2>Suivi personnalisé</h2>
-            <p>
-              Notre programme de suivi assure la pérennité de vos résultats
-              grâce à un accompagnement expert et des conseils adaptés à votre
-              nouveau mode de vie.
-            </p>
-
-            <div class="service-features">
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Bilans réguliers</h4>
-                <p>
-                  Évaluations périodiques de vos progrès et ajustements
-                  nécessaires
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Coaching alimentaire</h4>
-                <p>
-                  Conseils nutritionnels pour maintenir vos résultats sur le
-                  long terme
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Support motivationnel</h4>
-                <p>
-                  Accompagnement psychologique pour surmonter les obstacles et
-                  éviter les rechutes
-                </p>
-              </div>
-              <div class="feature">
-                <i class="fas fa-check-circle"></i>
-                <h4>Séances d'entretien</h4>
-                <p>
-                  Soins ciblés pour maintenir les résultats et préserver votre
-                  silhouette
-                </p>
-              </div>
-            </div>
-
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-          </div>
-          <div class="service-image">
-            <i class="fas fa-hand-holding-medical service-big-icon"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- To do add margin -->
-
-    <!-- Pricing -->
-    <section id="pricing">
-      <div class="container">
-        <div class="section-header">
-          <h2>Nos formules</h2>
-          <p>Des solutions adaptées à vos besoins et à votre budget</p>
-        </div>
-
-        <div class="pricing-grid">
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Essentiel</h3>
-              <div class="price">
-                <span>À partir de</span>
-                <span class="amount">250 DT</span>
-              </div>
-            </div>
-            <div class="pricing-body">
-              <ul>
-                <li><i class="fas fa-check"></i> Entretien et bilan initial</li>
-                <li><i class="fas fa-check"></i> 5 séances d'amincissement</li>
-                <li><i class="fas fa-check"></i> Plan nutritionnel de base</li>
-                <li><i class="fas fa-check"></i> 1 séance de suivi</li>
-              </ul>
-            </div>
-            <div class="pricing-footer">
-              <a href="contact.html" class="btn btn-secondary"
-                >Demander un devis</a
-              >
-            </div>
-          </div>
-          <div class="pricing-card featured">
-            <div class="pricing-tag">Populaire</div>
-            <div class="pricing-header">
-              <h3>Premium</h3>
-              <div class="price">
-                <span>À partir de</span>
-                <span class="amount">450 DT</span>
-              </div>
-            </div>
-            <div class="pricing-body">
-              <ul>
-                <li><i class="fas fa-check"></i> Entretien et bilan complet</li>
-                <li><i class="fas fa-check"></i> 10 séances d'amincissement</li>
-                <li>
-                  <i class="fas fa-check"></i> Plan nutritionnel personnalisé
-                </li>
-                <li>
-                  <i class="fas fa-check"></i> 3 séances de raffermissement
-                </li>
-                <li><i class="fas fa-check"></i> 2 séances de suivi</li>
-                <li><i class="fas fa-check"></i> 1 soin bien-être offert</li>
-              </ul>
-            </div>
-            <div class="pricing-footer">
               <a href="contact.html" class="btn btn-primary"
-                >Demander un devis</a
+                >Prendre rendez-vous</a
               >
             </div>
           </div>
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3>Excellence</h3>
-              <div class="price">
-                <span>À partir de</span>
-                <span class="amount">750 DT</span>
+
+          <!-- Raffermissement -->
+          <div id="raffermissement" class="service-item reverse">
+            <div class="service-content">
+              <h2>Raffermissement corporel</h2>
+              <p>
+                Notre programme de raffermissement vise à tonifier la peau et à
+                remodeler silhouette après une perte de poids ou pour lutter
+                contre les effets naturels du vieillissement cutané.
+              </p>
+
+              <div class="service-features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Techniques de musculation passive</h4>
+                  <p>Stimulation musculaire ciblée pour tonifier sans effort</p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Technologies radio-fréquence</h4>
+                  <p>
+                    Traitement non-invasif pour resserrer les tissus et
+                    améliorer l'élasticité
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Massages drainants</h4>
+                  <p>
+                    Techniques manuelles pour activer la circulation et
+                    raffermir les tissus
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Soins cosmétiques ciblés</h4>
+                  <p>
+                    Produits professionnels pour compléter et optimiser les
+                    résultats
+                  </p>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+            </div>
+            <div class="service-image">
+              <i class="fas fa-person-running service-big-icon"></i>
+            </div>
+          </div>
+
+          <!-- Bien-être -->
+          <div id="bien-etre" class="service-item">
+            <div class="service-image">
+              <i class="fas fa-spa service-big-icon"></i>
+            </div>
+            <div class="service-content">
+              <h2>Soins bien-être</h2>
+              <p>
+                Nos soins de bien-être complètent votre parcours d'amincissement
+                en apportant relaxation, gestion du stress et amélioration de
+                votre état général, essentiels pour un résultat durable.
+              </p>
+
+              <div class="service-features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Massages relaxants</h4>
+                  <p>
+                    Techniques variées pour diminuer le stress et améliorer le
+                    bien-être général
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Thérapies détoxifiantes</h4>
+                  <p>
+                    Soins ciblés pour éliminer les toxines et purifier
+                    l'organisme
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Aromathérapie</h4>
+                  <p>
+                    Utilisation d'huiles essentielles pour harmoniser corps et
+                    esprit
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Conseils en gestion du stress</h4>
+                  <p>
+                    Techniques et recommandations pour un équilibre émotionnel
+                    favorable à la perte de poids
+                  </p>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+            </div>
+          </div>
+
+          <!-- Suivi personnalisé -->
+          <div id="suivi" class="service-item reverse">
+            <div class="service-content">
+              <h2>Suivi personnalisé</h2>
+              <p>
+                Notre programme de suivi assure la pérennité de vos résultats
+                grâce à un accompagnement expert et des conseils adaptés à votre
+                nouveau mode de vie.
+              </p>
+
+              <div class="service-features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Bilans réguliers</h4>
+                  <p>
+                    Évaluations périodiques de vos progrès et ajustements
+                    nécessaires
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Coaching alimentaire</h4>
+                  <p>
+                    Conseils nutritionnels pour maintenir vos résultats sur le
+                    long terme
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Support motivationnel</h4>
+                  <p>
+                    Accompagnement psychologique pour surmonter les obstacles et
+                    éviter les rechutes
+                  </p>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <h4>Séances d'entretien</h4>
+                  <p>
+                    Soins ciblés pour maintenir les résultats et préserver votre
+                    silhouette
+                  </p>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+            </div>
+            <div class="service-image">
+              <i class="fas fa-hand-holding-medical service-big-icon"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- To do add margin -->
+
+      <!-- Pricing -->
+      <section id="pricing">
+        <div class="container">
+          <div class="section-header">
+            <h2>Nos formules</h2>
+            <p>Des solutions adaptées à vos besoins et à votre budget</p>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Essentiel</h3>
+                <div class="price">
+                  <span>À partir de</span>
+                  <span class="amount">250 DT</span>
+                </div>
+              </div>
+              <div class="pricing-body">
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Entretien et bilan initial
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> 5 séances d'amincissement
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Plan nutritionnel de base
+                  </li>
+                  <li><i class="fas fa-check"></i> 1 séance de suivi</li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <a href="contact.html" class="btn btn-secondary"
+                  >Demander un devis</a
+                >
               </div>
             </div>
-            <div class="pricing-body">
-              <ul>
-                <li><i class="fas fa-check"></i> Entretien et bilan expert</li>
-                <li><i class="fas fa-check"></i> 15 séances d'amincissement</li>
-                <li>
-                  <i class="fas fa-check"></i> Plan nutritionnel sur mesure
-                </li>
-                <li>
-                  <i class="fas fa-check"></i> 5 séances de raffermissement
-                </li>
-                <li><i class="fas fa-check"></i> 3 soins bien-être</li>
-                <li><i class="fas fa-check"></i> 4 séances de suivi</li>
-                <li><i class="fas fa-check"></i> Support téléphonique dédié</li>
-              </ul>
+            <div class="pricing-card featured">
+              <div class="pricing-tag">Populaire</div>
+              <div class="pricing-header">
+                <h3>Premium</h3>
+                <div class="price">
+                  <span>À partir de</span>
+                  <span class="amount">450 DT</span>
+                </div>
+              </div>
+              <div class="pricing-body">
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Entretien et bilan complet
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> 10 séances d'amincissement
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Plan nutritionnel personnalisé
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> 3 séances de raffermissement
+                  </li>
+                  <li><i class="fas fa-check"></i> 2 séances de suivi</li>
+                  <li><i class="fas fa-check"></i> 1 soin bien-être offert</li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <a href="contact.html" class="btn btn-primary"
+                  >Demander un devis</a
+                >
+              </div>
             </div>
-            <div class="pricing-footer">
-              <a href="contact.html" class="btn btn-secondary"
-                >Demander un devis</a
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Excellence</h3>
+                <div class="price">
+                  <span>À partir de</span>
+                  <span class="amount">750 DT</span>
+                </div>
+              </div>
+              <div class="pricing-body">
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i> Entretien et bilan expert
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> 15 séances d'amincissement
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> Plan nutritionnel sur mesure
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i> 5 séances de raffermissement
+                  </li>
+                  <li><i class="fas fa-check"></i> 3 soins bien-être</li>
+                  <li><i class="fas fa-check"></i> 4 séances de suivi</li>
+                  <li>
+                    <i class="fas fa-check"></i> Support téléphonique dédié
+                  </li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <a href="contact.html" class="btn btn-secondary"
+                  >Demander un devis</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-note">
+            <p>
+              Tous nos programmes sont personnalisables selon vos besoins
+              spécifiques. Contactez-nous pour une proposition sur mesure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Commencez votre transformation dès aujourd'hui</h2>
+            <p>
+              Prenez rendez-vous pour un entretien gratuit avec l'un de nos
+              experts
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+              <a href="testimonials.html" class="btn btn-secondary"
+                >Voir les témoignages</a
               >
             </div>
           </div>
         </div>
-
-        <div class="pricing-note">
-          <p>
-            Tous nos programmes sont personnalisables selon vos besoins
-            spécifiques. Contactez-nous pour une proposition sur mesure.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="cta">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Commencez votre transformation dès aujourd'hui</h2>
-          <p>
-            Prenez rendez-vous pour un entretien gratuit avec l'un de nos
-            experts
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-            <a href="testimonials.html" class="btn btn-secondary"
-              >Voir les témoignages</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer id="footer">

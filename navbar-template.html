@@ -1,0 +1,58 @@
+<!-- TEMPLATE NAVBAR STANDARDISÉ - À COPIER DANS TOUTES LES PAGES -->
+
+<!-- CSS à inclure dans le <head> -->
+<!--
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+<link rel="stylesheet" href="css/navbar-emergency-fix.css" />
+-->
+
+<!-- Skip link pour accessibilité -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Vitalia Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul
+        class="nav-menu"
+        id="nav-menu"
+        role="navigation"
+        aria-label="Menu principal"
+      >
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="testimonials.html">Témoignages</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button
+        class="mobile-menu-btn"
+        aria-label="Ouvrir le menu de navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <i class="fas fa-bars"></i>
+        <span class="sr-only">Menu</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- NOTES D'IMPLÉMENTATION :
+1. Remplacer <div class="mobile-menu-btn"> par <button class="mobile-menu-btn">
+2. Ajouter les attributs ARIA : role, aria-label, aria-expanded, aria-controls
+3. Ajouter <span class="sr-only">Menu</span> dans le bouton
+4. Ajouter le skip link avant le header
+5. Ajouter id="nav-menu" à la liste ul
+6. Marquer la page active avec class="active" sur le bon lien
+7. Inclure tous les fichiers CSS dans l'ordre correct
+8. Ajouter id="main-content" au contenu principal
+-->

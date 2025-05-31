@@ -11,6 +11,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -23,6 +25,9 @@
     />
   </head>
   <body>
+    <!-- Skip link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -30,9 +35,13 @@
           <a href="index.html">
             <img src="assets/logo.png" alt="Vitalia Logo" />
           </a>
-        </div>
-        <nav>
-          <ul class="nav-menu">
+        </div>        <nav>
+          <ul
+            class="nav-menu"
+            id="nav-menu"
+            role="navigation"
+            aria-label="Menu principal"
+          >
             <li><a href="index.html">Accueil</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html">À propos</a></li>
@@ -40,14 +49,21 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
           </ul>
-          <div class="mobile-menu-btn">
+          <button
+            class="mobile-menu-btn"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
             <i class="fas fa-bars"></i>
-          </div>
+            <span class="sr-only">Menu</span>
+          </button>
         </nav>
       </div>
     </header>
 
-    <!-- Page Banner -->
+    
+    <main id="main-content"><!-- Page Banner -->
     <section id="page-banner">
       <div class="container">
         <h1>Contactez-nous</h1>
@@ -55,7 +71,8 @@
       </div>
     </section>
 
-    <!-- Contact Information -->
+    
+    </main><!-- Contact Information -->
     <section id="contact-info">
       <div class="container">
         <div class="info-cards">

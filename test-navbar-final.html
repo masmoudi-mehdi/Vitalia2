@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Final Navbar - Vitalia</title>
+    
+    <!-- CSS dans le même ordre que home.html -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css">
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            padding-top: 100px;
+        }
+        
+        .test-content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .status {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .test-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .test-box {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Header - EXACTEMENT comme dans home.html -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html">
+                    <img src="assets/logo.png" alt="Vitalia Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="testimonials.html">Témoignages</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" 
+                        aria-label="Ouvrir le menu de navigation" 
+                        aria-expanded="false"
+                        aria-controls="nav-menu">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">Menu</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="test-content">
+            <h1>🔧 Test Final - Correction Navbar</h1>
+            
+            <div class="status success">
+                ✅ Correction d'urgence appliquée avec navbar-emergency-fix.css
+            </div>
+            
+            <div class="test-grid">
+                <div class="test-box">
+                    <h3>🖥️ Desktop (> 768px)</h3>
+                    <p><strong>Doit afficher :</strong></p>
+                    <ul>
+                        <li>✅ Navigation horizontale</li>
+                        <li>✅ Liens alignés à droite</li>
+                        <li>✅ Bouton mobile caché</li>
+                        <li>✅ Hover effects normaux</li>
+                        <li>✅ Logo à gauche</li>
+                    </ul>
+                </div>
+                
+                <div class="test-box">
+                    <h3>📱 Mobile (≤ 768px)</h3>
+                    <p><strong>Doit afficher :</strong></p>
+                    <ul>
+                        <li>✅ Bouton hamburger visible</li>
+                        <li>✅ Touch targets 44x44px</li>
+                        <li>✅ Menu overlay fonctionnel</li>
+                        <li>✅ Navigation verticale</li>
+                        <li>✅ Feedback tactile</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="status success">
+                <strong>🎯 Solution Appliquée :</strong><br>
+                Le fichier <code>navbar-emergency-fix.css</code> force les styles corrects avec <code>!important</code> pour override tous les conflits.
+            </div>
+            
+            <h2>📋 Instructions de Test</h2>
+            <ol>
+                <li><strong>Redimensionnez la fenêtre</strong> pour tester les breakpoints</li>
+                <li><strong>Desktop :</strong> La navbar doit être horizontale avec liens à droite</li>
+                <li><strong>Mobile :</strong> Seul le bouton hamburger doit être visible</li>
+                <li><strong>Cliquez sur le hamburger :</strong> Le menu doit s'ouvrir en overlay</li>
+                <li><strong>Navigation clavier :</strong> Tab et Escape doivent fonctionner</li>
+            </ol>
+            
+            <h2>🔧 Fichiers de Correction</h2>
+            <ul>
+                <li><code>css/navbar-emergency-fix.css</code> - Correction forcée avec !important</li>
+                <li><code>home.html</code> - Fichier de correction ajouté</li>
+                <li>Ordre CSS : style.css → responsive.css → mobile-accessibility-2025.css → <strong>navbar-emergency-fix.css</strong></li>
+            </ul>
+            
+            <div class="status success">
+                🎉 Si vous voyez cette navbar correctement, la correction fonctionne !
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔍 Test Final Navbar - Vitalia');
+            
+            function checkNavbar() {
+                const mobileBtn = document.querySelector('.mobile-menu-btn');
+                const navMenu = document.querySelector('.nav-menu');
+                const windowWidth = window.innerWidth;
+                
+                console.log(`Largeur: ${windowWidth}px`);
+                
+                if (windowWidth > 768) {
+                    const navDisplay = getComputedStyle(navMenu).display;
+                    const navPosition = getComputedStyle(navMenu).position;
+                    const btnDisplay = getComputedStyle(mobileBtn).display;
+                    
+                    console.log('🖥️ Desktop:');
+                    console.log(`- Menu display: ${navDisplay} (doit être flex)`);
+                    console.log(`- Menu position: ${navPosition} (doit être static)`);
+                    console.log(`- Bouton mobile: ${btnDisplay} (doit être none)`);
+                    
+                    if (navDisplay === 'flex' && navPosition === 'static' && btnDisplay === 'none') {
+                        console.log('✅ Desktop OK');
+                    } else {
+                        console.log('❌ Desktop KO');
+                    }
+                } else {
+                    const navPosition = getComputedStyle(navMenu).position;
+                    const btnDisplay = getComputedStyle(mobileBtn).display;
+                    
+                    console.log('📱 Mobile:');
+                    console.log(`- Menu position: ${navPosition} (doit être fixed)`);
+                    console.log(`- Bouton mobile: ${btnDisplay} (doit être flex)`);
+                    
+                    if (navPosition === 'fixed' && btnDisplay === 'flex') {
+                        console.log('✅ Mobile OK');
+                    } else {
+                        console.log('❌ Mobile KO');
+                    }
+                }
+            }
+            
+            checkNavbar();
+            window.addEventListener('resize', checkNavbar);
+        });
+    </script>
+</body>
+</html>

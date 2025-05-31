@@ -30,6 +30,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -42,6 +44,9 @@
     />
   </head>
   <body>
+    <!-- Skip link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- Header -->
     <header id="header">
       <div class="container">
@@ -51,7 +56,12 @@
           </a>
         </div>
         <nav>
-          <ul class="nav-menu">
+          <ul
+            class="nav-menu"
+            id="nav-menu"
+            role="navigation"
+            aria-label="Menu principal"
+          >
             <li><a href="index.html">Accueil</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="about.html" class="active">À propos</a></li>
@@ -59,356 +69,364 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="mobile-menu-btn">
+          <button
+            class="mobile-menu-btn"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
             <i class="fas fa-bars"></i>
-          </div>
+            <span class="sr-only">Menu</span>
+          </button>
         </nav>
       </div>
     </header>
 
     <!-- Page Banner -->
-    <section id="page-banner">
-      <div class="container">
-        <h1>À propos de Vitalia</h1>
-        <p>
-          Votre partenaire de confiance pour l'amincissement et le bien-être en
-          Tunisie
-        </p>
-      </div>
-    </section>
+    <main id="main-content">
+      <section id="page-banner">
+        <div class="container">
+          <h1>À propos de Vitalia</h1>
+          <p>
+            Votre partenaire de confiance pour l'amincissement et le bien-être
+            en Tunisie
+          </p>
+        </div>
+      </section>
 
-    <!-- Our Story -->
-    <section id="our-story">
-      <div class="container">
-        <div class="story-content">
+      <!-- Our Story -->
+      <section id="our-story">
+        <div class="container">
+          <div class="story-content">
+            <div class="section-header">
+              <h2>Notre histoire</h2>
+              <!-- To Do -->
+              <p class="mt-2">
+                Comment Vitalia est devenu le centre d'amincissement de
+                référence en Tunisie
+              </p>
+            </div>
+            <div class="story-text">
+              <p>
+                Fondé en 2010 par Expert Leila Berhouma, nutritionniste de
+                renom, Vitalia est né d'une vision claire : offrir des solutions
+                d'amincissement efficaces, saines et durables aux Tunisiens
+                souhaitant transformer leur silhouette et améliorer leur
+                bien-être.
+              </p>
+
+              <p>
+                Au fil des années, notre centre s'est développé pour intégrer
+                les technologies les plus avancées et les approches les plus
+                innovantes dans le domaine de l'amincissement et du bien-être.
+                Nous avons constitué une équipe de professionnels dévoués et
+                hautement qualifiés, tous partageant la même mission :
+                accompagner chaque curiste vers l'atteinte de ses objectifs avec
+                bienveillance et expertise.
+              </p>
+
+              <p>
+                Aujourd'hui, Vitalia est fier d'avoir aidé plus de 5000 curistes
+                à retrouver confiance en eux, à améliorer leur santé et à
+                transformer durablement leur apparence. Notre approche
+                holistique, combinant techniques d'amincissement, conseils
+                nutritionnels et soutien psychologique, nous a permis de devenir
+                une référence dans notre domaine.
+              </p>
+
+              <p>
+                Ce qui nous distingue ? Notre engagement indéfectible envers la
+                satisfaction client et les résultats tangibles. Chaque parcours
+                chez Vitalia est une aventure personnalisée, conçue pour
+                répondre aux besoins spécifiques de chaque individu.
+              </p>
+            </div>
+            <div class="story-timeline">
+              <div class="timeline-item">
+                <div class="year">2010</div>
+                <div class="event">
+                  <h4>Fondation de Vitalia</h4>
+                  <p>
+                    Ouverture du premier centre à Tunis avec une équipe de 3
+                    professionnels
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2013</div>
+                <div class="event">
+                  <h4>Expansion des services</h4>
+                  <p>
+                    Introduction de nouvelles technologies d'amincissement et
+                    agrandissement du centre
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2015</div>
+                <div class="event">
+                  <h4>Certification internationale</h4>
+                  <p>
+                    Obtention de certifications prestigieuses pour nos méthodes
+                    d'amincissement
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2018</div>
+                <div class="event">
+                  <h4>1000ème client satisfait</h4>
+                  <p>Une étape importante dans notre parcours de réussite</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2020</div>
+                <div class="event">
+                  <h4>10 ans d'excellence</h4>
+                  <p>Célébration d'une décennie d'expertise et de résultats</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="year">2023</div>
+                <div class="event">
+                  <h4>Lancement de nouvelles méthodes</h4>
+                  <p>
+                    Introduction des dernières innovations en matière
+                    d'amincissement
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Values -->
+      <section id="our-values">
+        <div class="container">
           <div class="section-header">
-            <h2>Notre histoire</h2>
-            <!-- To Do -->
-            <p class="mt-2">
-              Comment Vitalia est devenu le centre d'amincissement de référence
-              en Tunisie
-            </p>
+            <h2>Nos valeurs</h2>
+            <p>Les principes qui guident nos actions au quotidien</p>
           </div>
-          <div class="story-text">
-            <p>
-              Fondé en 2010 par Expert Leila Berhouma, nutritionniste de renom,
-              Vitalia est né d'une vision claire : offrir des solutions
-              d'amincissement efficaces, saines et durables aux Tunisiens
-              souhaitant transformer leur silhouette et améliorer leur
-              bien-être.
-            </p>
-
-            <p>
-              Au fil des années, notre centre s'est développé pour intégrer les
-              technologies les plus avancées et les approches les plus
-              innovantes dans le domaine de l'amincissement et du bien-être.
-              Nous avons constitué une équipe de professionnels dévoués et
-              hautement qualifiés, tous partageant la même mission : accompagner
-              chaque curiste vers l'atteinte de ses objectifs avec bienveillance
-              et expertise.
-            </p>
-
-            <p>
-              Aujourd'hui, Vitalia est fier d'avoir aidé plus de 5000 curistes à
-              retrouver confiance en eux, à améliorer leur santé et à
-              transformer durablement leur apparence. Notre approche holistique,
-              combinant techniques d'amincissement, conseils nutritionnels et
-              soutien psychologique, nous a permis de devenir une référence dans
-              notre domaine.
-            </p>
-
-            <p>
-              Ce qui nous distingue ? Notre engagement indéfectible envers la
-              satisfaction client et les résultats tangibles. Chaque parcours
-              chez Vitalia est une aventure personnalisée, conçue pour répondre
-              aux besoins spécifiques de chaque individu.
-            </p>
-          </div>
-          <div class="story-timeline">
-            <div class="timeline-item">
-              <div class="year">2010</div>
-              <div class="event">
-                <h4>Fondation de Vitalia</h4>
-                <p>
-                  Ouverture du premier centre à Tunis avec une équipe de 3
-                  professionnels
-                </p>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2013</div>
-              <div class="event">
-                <h4>Expansion des services</h4>
-                <p>
-                  Introduction de nouvelles technologies d'amincissement et
-                  agrandissement du centre
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2015</div>
-              <div class="event">
-                <h4>Certification internationale</h4>
-                <p>
-                  Obtention de certifications prestigieuses pour nos méthodes
-                  d'amincissement
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2018</div>
-              <div class="event">
-                <h4>1000ème client satisfait</h4>
-                <p>Une étape importante dans notre parcours de réussite</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2020</div>
-              <div class="event">
-                <h4>10 ans d'excellence</h4>
-                <p>Célébration d'une décennie d'expertise et de résultats</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="year">2023</div>
-              <div class="event">
-                <h4>Lancement de nouvelles méthodes</h4>
-                <p>
-                  Introduction des dernières innovations en matière
-                  d'amincissement
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Values -->
-    <section id="our-values">
-      <div class="container">
-        <div class="section-header">
-          <h2>Nos valeurs</h2>
-          <p>Les principes qui guident nos actions au quotidien</p>
-        </div>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>Bien-être global</h3>
-            <p>
-              Nous considérons chaque client dans sa globalité, en tenant compte
-              de tous les aspects de son bien-être physique et mental.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3>Sécurité</h3>
-            <p>
-              Toutes nos méthodes sont validées scientifiquement et appliquées
-              dans le plus strict respect de votre santé.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>Résultats</h3>
-            <p>
-              Nous nous engageons à vous offrir des résultats visibles et
-              durables, mesurables tout au long de votre parcours.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-user-friends"></i>
-            </div>
-            <h3>Accompagnement</h3>
-            <p>
-              Nous vous soutenons à chaque étape de votre transformation avec
-              bienveillance et professionnalisme.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <h3>Expertise</h3>
-            <p>
-              Notre équipe se forme continuellement aux dernières avancées pour
-              vous offrir le meilleur de l'amincissement.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3>Innovation</h3>
-            <p>
-              Nous recherchons constamment de nouvelles solutions pour améliorer
-              votre expérience et vos résultats.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Team -->
-    <section id="our-team">
-      <div class="container">
-        <div class="section-header">
-          <h2>Notre équipe</h2>
-          <p>Des professionnels passionnés à votre service</p>
-        </div>
-
-        <!-- Vedette -->
-        <div class="team-star">
-          <div class="team-star-image">
-            <img src="assets/team/dr-anis-jday.jpg" alt="Dr. Anis Jday" />
-          </div>
-          <div class="team-star-info">
-            <h3><a href="dr-anis-jday.html">Expert Anis Jday</a></h3>
-            <span class="position">Expert spécialisé</span>
-            <div class="star-bio">
+              <h3>Bien-être global</h3>
               <p>
-                L'Expert Anis Jday est une référence incontournable dans le
-                domaine de l'amincissement professionnel en Tunisie. Dévoué aux
-                avancées professionnelles dans les programmes d'amincissement,
-                il a développé des protocoles innovants combinant approches
-                modernes et vision holistique.
+                Nous considérons chaque client dans sa globalité, en tenant
+                compte de tous les aspects de son bien-être physique et mental.
               </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Sécurité</h3>
               <p>
-                Sa vision unique et son expertise exceptionnelle ont permis à
-                des milliers de curistes de transformer leur vie en atteignant
-                leurs objectifs de poids de manière saine et durable.
+                Toutes nos méthodes sont validées scientifiquement et appliquées
+                dans le plus strict respect de votre santé.
               </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Résultats</h3>
               <p>
-                <a href="dr-anis-jday.html" class="btn btn-secondary btn-sm"
-                  >En savoir plus sur Expert Jday</a
+                Nous nous engageons à vous offrir des résultats visibles et
+                durables, mesurables tout au long de votre parcours.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h3>Accompagnement</h3>
+              <p>
+                Nous vous soutenons à chaque étape de votre transformation avec
+                bienveillance et professionnalisme.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Expertise</h3>
+              <p>
+                Notre équipe se forme continuellement aux dernières avancées
+                pour vous offrir le meilleur de l'amincissement.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3>Innovation</h3>
+              <p>
+                Nous recherchons constamment de nouvelles solutions pour
+                améliorer votre expérience et vos résultats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team -->
+      <section id="our-team">
+        <div class="container">
+          <div class="section-header">
+            <h2>Notre équipe</h2>
+            <p>Des professionnels passionnés à votre service</p>
+          </div>
+
+          <!-- Vedette -->
+          <div class="team-star">
+            <div class="team-star-image">
+              <img src="assets/team/dr-anis-jday.jpg" alt="Dr. Anis Jday" />
+            </div>
+            <div class="team-star-info">
+              <h3><a href="dr-anis-jday.html">Expert Anis Jday</a></h3>
+              <span class="position">Expert spécialisé</span>
+              <div class="star-bio">
+                <p>
+                  L'Expert Anis Jday est une référence incontournable dans le
+                  domaine de l'amincissement professionnel en Tunisie. Dévoué
+                  aux avancées professionnelles dans les programmes
+                  d'amincissement, il a développé des protocoles innovants
+                  combinant approches modernes et vision holistique.
+                </p>
+                <p>
+                  Sa vision unique et son expertise exceptionnelle ont permis à
+                  des milliers de curistes de transformer leur vie en atteignant
+                  leurs objectifs de poids de manière saine et durable.
+                </p>
+                <p>
+                  <a href="dr-anis-jday.html" class="btn btn-secondary btn-sm"
+                    >En savoir plus sur Expert Jday</a
+                  >
+                </p>
+              </div>
+              <div class="member-certifications star-certifications">
+                <span>Expert en Bien-être</span>
+                <span>Expert en protocoles d'amincissement</span>
+                <span
+                  >Membre de l'association professionnelle morpho-esthétique en
+                  France</span
                 >
-              </p>
+              </div>
             </div>
-            <div class="member-certifications star-certifications">
-              <span>Expert en Bien-être</span>
-              <span>Expert en protocoles d'amincissement</span>
-              <span
-                >Membre de l'association professionnelle morpho-esthétique en
-                France</span
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="container">
+          <div class="section-header">
+            <h2>Questions fréquentes</h2>
+            <p>Tout ce que vous devez savoir sur nos services</p>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Combien de temps faut-il pour voir des résultats ?</h3>
+                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Les premiers résultats sont généralement visibles après 3 à 5
+                  séances, en fonction du programme choisi et de votre
+                  métabolisme. Un programme complet dure généralement entre 8 et
+                  12 semaines pour des résultats optimaux et durables.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Vos méthodes sont-elles douloureuses ?</h3>
+                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Non, nos méthodes d'amincissement sont non-invasives et
+                  indolores. Certains traitements peuvent provoquer une
+                  sensation de chaleur ou de légères contractions musculaires,
+                  mais jamais de douleur. Votre confort est notre priorité.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Les résultats sont-ils durables ?</h3>
+                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Oui, nos programmes incluent un volet éducatif pour vous aider
+                  à maintenir vos résultats sur le long terme. Nous vous
+                  enseignons les bonnes habitudes alimentaires et vous proposons
+                  un suivi adapté après votre programme initial pour garantir la
+                  durabilité de vos résultats.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Proposez-vous des facilités de paiement ?</h3>
+                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Oui, nous proposons différentes options de paiement, y compris
+                  des paiements échelonnés sans frais supplémentaires pour les
+                  programmes complets. N'hésitez pas à discuter de vos besoins
+                  avec notre équipe d'accueil.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Vos méthodes conviennent-elles à tout le monde ?</h3>
+                <span class="faq-icon"><i class="fas fa-plus"></i></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  La plupart de nos méthodes conviennent à un large public, mais
+                  certaines peuvent être contre-indiquées dans des cas
+                  spécifiques (grossesse, certaines conditions). C'est pourquoi
+                  nous réalisons systématiquement un bilan complet avant de
+                  commencer tout programme, afin de vous proposer uniquement les
+                  solutions adaptées à votre situation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Prêt à découvrir Vitalia ?</h2>
+            <p>
+              Prenez rendez-vous pour une visite de nos installations et une
+              consultation gratuite
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+              <a href="testimonials.html" class="btn btn-secondary"
+                >Lire les témoignages</a
               >
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-header">
-          <h2>Questions fréquentes</h2>
-          <p>Tout ce que vous devez savoir sur nos services</p>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Combien de temps faut-il pour voir des résultats ?</h3>
-              <span class="faq-icon"><i class="fas fa-plus"></i></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Les premiers résultats sont généralement visibles après 3 à 5
-                séances, en fonction du programme choisi et de votre
-                métabolisme. Un programme complet dure généralement entre 8 et
-                12 semaines pour des résultats optimaux et durables.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Vos méthodes sont-elles douloureuses ?</h3>
-              <span class="faq-icon"><i class="fas fa-plus"></i></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Non, nos méthodes d'amincissement sont non-invasives et
-                indolores. Certains traitements peuvent provoquer une sensation
-                de chaleur ou de légères contractions musculaires, mais jamais
-                de douleur. Votre confort est notre priorité.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Les résultats sont-ils durables ?</h3>
-              <span class="faq-icon"><i class="fas fa-plus"></i></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Oui, nos programmes incluent un volet éducatif pour vous aider à
-                maintenir vos résultats sur le long terme. Nous vous enseignons
-                les bonnes habitudes alimentaires et vous proposons un suivi
-                adapté après votre programme initial pour garantir la durabilité
-                de vos résultats.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Proposez-vous des facilités de paiement ?</h3>
-              <span class="faq-icon"><i class="fas fa-plus"></i></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                Oui, nous proposons différentes options de paiement, y compris
-                des paiements échelonnés sans frais supplémentaires pour les
-                programmes complets. N'hésitez pas à discuter de vos besoins
-                avec notre équipe d'accueil.
-              </p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Vos méthodes conviennent-elles à tout le monde ?</h3>
-              <span class="faq-icon"><i class="fas fa-plus"></i></span>
-            </div>
-            <div class="faq-answer">
-              <p>
-                La plupart de nos méthodes conviennent à un large public, mais
-                certaines peuvent être contre-indiquées dans des cas spécifiques
-                (grossesse, certaines conditions). C'est pourquoi nous réalisons
-                systématiquement un bilan complet avant de commencer tout
-                programme, afin de vous proposer uniquement les solutions
-                adaptées à votre situation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="cta">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Prêt à découvrir Vitalia ?</h2>
-          <p>
-            Prenez rendez-vous pour une visite de nos installations et une
-            consultation gratuite
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-primary"
-              >Prendre rendez-vous</a
-            >
-            <a href="testimonials.html" class="btn btn-secondary"
-              >Lire les témoignages</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer id="footer">

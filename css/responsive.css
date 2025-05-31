@@ -80,7 +80,7 @@
   }
 
   .nav-menu li {
-    margin: 0 0 var(--spacing-md);
+    margin: 0 0 8px; /* OPTIMISATION MOBILE 2025 - Espacement touch targets */
     width: 100%;
     text-align: center;
   }

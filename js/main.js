@@ -40,6 +40,14 @@ function initNavigation() {
       navMenu.classList.toggle("active");
       body.classList.toggle("menu-open");
 
+      // OPTIMISATION MOBILE 2025 - Amélioration accessibilité
+      // Mettre à jour les attributs ARIA
+      this.setAttribute("aria-expanded", !isOpen);
+      this.setAttribute(
+        "aria-label",
+        isOpen ? "Ouvrir le menu de navigation" : "Fermer le menu de navigation"
+      );
+
       // Changer l'icône
       if (icon) {
         icon.className = isOpen ? "fas fa-bars" : "fas fa-times";
@@ -47,6 +55,15 @@ function initNavigation() {
 
       // Gérer le scroll
       body.style.overflow = isOpen ? "" : "hidden";
+
+      // Focus management pour l'accessibilité
+      if (!isOpen) {
+        // Menu s'ouvre - focus sur le premier lien
+        const firstLink = navMenu.querySelector("a");
+        if (firstLink) {
+          setTimeout(() => firstLink.focus(), 100);
+        }
+      }
     });
 
     // Fermer le menu quand on clique sur un lien
@@ -56,6 +73,13 @@ function initNavigation() {
         mobileMenuBtn.classList.remove("active");
         body.classList.remove("menu-open");
         body.style.overflow = "";
+
+        // OPTIMISATION MOBILE 2025 - Restaurer les attributs ARIA
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        mobileMenuBtn.setAttribute(
+          "aria-label",
+          "Ouvrir le menu de navigation"
+        );
 
         const icon = mobileMenuBtn.querySelector("i");
         if (icon) {
@@ -76,10 +100,41 @@ function initNavigation() {
         body.classList.remove("menu-open");
         body.style.overflow = "";
 
+        // OPTIMISATION MOBILE 2025 - Restaurer les attributs ARIA
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        mobileMenuBtn.setAttribute(
+          "aria-label",
+          "Ouvrir le menu de navigation"
+        );
+
         const icon = mobileMenuBtn.querySelector("i");
         if (icon) {
           icon.className = "fas fa-bars";
         }
+      }
+    });
+
+    // OPTIMISATION MOBILE 2025 - Support navigation clavier (Escape)
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navMenu.classList.contains("active")) {
+        navMenu.classList.remove("active");
+        mobileMenuBtn.classList.remove("active");
+        body.classList.remove("menu-open");
+        body.style.overflow = "";
+
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        mobileMenuBtn.setAttribute(
+          "aria-label",
+          "Ouvrir le menu de navigation"
+        );
+
+        const icon = mobileMenuBtn.querySelector("i");
+        if (icon) {
+          icon.className = "fas fa-bars";
+        }
+
+        // Retourner le focus au bouton menu
+        mobileMenuBtn.focus();
       }
     });
   }
