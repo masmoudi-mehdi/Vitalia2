@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "Centre d'amincissement médicalisé en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision médicale par Dr. Anis Jday.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Avenue Habib Bourguiba",
-      addressLocality: "Tunis",
+      streetAddress:
+        "48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3eme étage",
+      addressLocality: "Menzah VIII",
       addressRegion: "Tunis",
-      postalCode: "1000",
+      postalCode: "2091",
       addressCountry: "TN",
     },
     geo: {
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       latitude: "36.8065",
       longitude: "10.1815",
     },
-    telephone: "+21671234567",
+    telephone: "+21671719065",
     email: "contact@vitalia.tn",
     openingHoursSpecification: [
       {
