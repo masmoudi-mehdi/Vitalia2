@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     logo: "https://centrevitalia.com/assets/logo.svg",
     image: "https://centrevitalia.com/assets/hero.svg",
     description:
-      "Centre d'amincissement professionnel en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision professionnelle par Expert Anis Jday.",
+      "Centre d'amincissement professionnel en Tunisie, spécialisé en Cellu M6, lipocryolyse, I.motion et omeoenergetica. Solutions d'amincissement personnalisées sous supervision professionnelle par le Docteur Anis Jday.",
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   };
 
-  // Schéma pour Expert Anis Jday
+  // Schéma pour le Docteur Anis Jday
   const expertSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Expert Anis Jday",
+    name: "Docteur Anis Jday",
     image: "https://vitalia.tn/assets/team/dr-anis-jday.jpg",
     description:
       "Référence en amincissement professionnel et nutrition en Tunisie avec plus de 15 ans d'expérience",
