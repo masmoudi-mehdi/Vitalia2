@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Découvrez l'équipe Vitalia et le Docteur Anis Jday, expert en amincissement médicalisé, nutrition et esthétique en Tunisie"
+    />
+    <title>Qui sommes-nous | Vitalia - Centre d'Amincissement en Tunisie</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      .doctor-profile {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        margin: 3rem 0;
+        align-items: start;
+      }
+
+      .doctor-image img {
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .qualifications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .qualification-item {
+        padding: 1.5rem;
+        background: var(--light-gray);
+        border-radius: 0.5rem;
+        text-align: center;
+      }
+
+      .qualification-item i {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .parcours-content {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .parcours-content::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--primary-color);
+      }
+
+      .parcours-item {
+        display: flex;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .parcours-year {
+        background: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: bold;
+        margin-right: 2rem;
+        min-width: 80px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .parcours-year::before {
+        content: '';
+        position: absolute;
+        left: -1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background: var(--primary-color);
+        border-radius: 50%;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .value-item {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      .value-item i {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .vitalia-mission blockquote {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+        margin: 3rem 0;
+      }
+
+      .vitalia-mission cite {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      @media (max-width: 768px) {
+        .doctor-profile {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .parcours-content {
+          padding-left: 1rem;
+        }
+
+        .parcours-item {
+          flex-direction: column;
+        }
+
+        .parcours-year {
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Skip link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/logo.png" alt="Vitalia Logo" />
+          </a>
+        </div>
+        <nav>
+          <ul
+            class="nav-menu"
+            id="nav-menu"
+            role="navigation"
+            aria-label="Menu principal"
+          >
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos points forts</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="qui-sommes-nous.html" class="active">Qui sommes-nous</a></li>
+            <li><a href="testimonials.html">Témoignages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <button
+            class="mobile-menu-btn"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <i class="fas fa-bars"></i>
+            <span class="sr-only">Menu</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <main id="main-content">
+      <section id="page-banner">
+        <div class="container">
+          <h1>Qui sommes-nous</h1>
+          <p>
+            Découvrez l'équipe Vitalia et notre expertise en amincissement médicalisé
+          </p>
+        </div>
+      </section>
+
+      <!-- Directeur Médical -->
+      <section id="directeur-medical">
+        <div class="container">
+          <div class="section-header">
+            <h2>Directeur médical du Centre Vitalia: Docteur Anis Jday</h2>
+            <p>Médecin expert en amincissement médicalisé, nutrition et esthétique</p>
+          </div>
+
+          <div class="doctor-profile">
+            <div class="doctor-image">
+              <img src="assets/team/dr-anis-jday.jpg" alt="Docteur Anis Jday" />
+            </div>
+            <div class="doctor-content">
+              <div class="doctor-intro">
+                <p>
+                  Médecin diplômé de la Faculté de Médecine de Tunis, le Dr Anis Jday s'est spécialisé dans les domaines du bien-être, de la nutrition, de l'amincissement médicalisé et de la médecine esthétique. Son parcours est guidé par une conviction profonde : allier science, innovation et approche humaine pour accompagner durablement chacun vers un mieux-être global.
+                </p>
+              </div>
+
+              <div class="doctor-qualifications">
+                <h3>Formation et Expertise</h3>
+                <div class="qualifications-grid">
+                  <div class="qualification-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Master en Thalassothérapie</h4>
+                    <p>Spécialisation dans les soins par l'eau de mer et les techniques de bien-être</p>
+                  </div>
+                  <div class="qualification-item">
+                    <i class="fas fa-certificate"></i>
+                    <h4>Membre AMME France</h4>
+                    <p>Association de Médecine Morpho-Esthétique - Formation continue aux techniques innovantes</p>
+                  </div>
+                  <div class="qualification-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Formations Internationales</h4>
+                    <p>Nutrition en Europe et Amérique du Nord - Vision intégrative scientifique</p>
+                  </div>
+                  <div class="qualification-item">
+                    <i class="fas fa-award"></i>
+                    <h4>Certification CQP Spa Manager</h4>
+                    <p>Certification française Qualiopi en management des spas médicalisés</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parcours Professionnel -->
+      <section id="parcours-professionnel">
+        <div class="container">
+          <div class="section-header">
+            <h2>Un Parcours d'Excellence</h2>
+          </div>
+
+          <div class="parcours-content">
+            <div class="parcours-item">
+              <div class="parcours-year">2007</div>
+              <div class="parcours-details">
+                <h3>Fondation du Premier Centre d'Amincissement Médicalisé</h3>
+                <p>
+                  Il fonde le tout premier centre d'amincissement médicalisé en Tunisie, un établissement pionnier alliant rigueur médicale et technologies de pointe. Ce centre, devenu une référence nationale, propose des protocoles personnalisés dans une démarche de santé durable et encadrée.
+                </p>
+              </div>
+            </div>
+
+            <div class="parcours-item">
+              <div class="parcours-year">2019</div>
+              <div class="parcours-details">
+                <h3>Innovation : Unité Mobile en Entreprise</h3>
+                <p>
+                  Il initie un projet visionnaire : la première unité mobile dédiée à l'amincissement et au bien-être en entreprise. Ce concept inédit rencontre un franc succès auprès de nombreuses entreprises internationales implantées en Tunisie, désireuses d'offrir à leurs collaborateurs un accompagnement santé et mieux-être directement sur leur lieu de travail.
+                </p>
+              </div>
+            </div>
+
+            <div class="parcours-item">
+              <div class="parcours-year">Présent</div>
+              <div class="parcours-details">
+                <h3>Expert Reconnu et Formateur</h3>
+                <p>
+                  Reconnu pour son expertise, son sens de l'innovation et son engagement, le Dr Anis Jday est également formateur et conférencier, intervenant régulièrement lors de congrès nationaux et internationaux. Il y présente ses travaux sur les approches les plus avancées en nutrition, en médecine esthétique et en technologies de remodelage corporel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Histoire de Vitalia -->
+      <section id="histoire-vitalia">
+        <div class="container">
+          <div class="section-header">
+            <h2>L'Histoire de Vitalia</h2>
+            <p>Bien plus qu'un centre d'amincissement</p>
+          </div>
+
+          <div class="histoire-content">
+            <div class="histoire-intro">
+              <p>
+                Fondé en 2007 par le Dr Anis Jday, Vitalia est le premier centre d'amincissement médicalisé en Tunisie, né d'une vision claire : offrir à chaque personne en quête de mieux-être un accompagnement global, profondément humain et entièrement personnalisé.
+              </p>
+            </div>
+
+            <div class="vitalia-values">
+              <h3>Notre Approche</h3>
+              <div class="values-grid">
+                <div class="value-item">
+                  <i class="fas fa-stethoscope"></i>
+                  <h4>Démarche Médicale</h4>
+                  <p>Ouverture d'un dossier individualisé, consultation nutritionnelle, examen approfondi pour construire une cure sur mesure.</p>
+                </div>
+                <div class="value-item">
+                  <i class="fas fa-user-cog"></i>
+                  <h4>Personnalisation</h4>
+                  <p>Chaque histoire est unique, chaque parcours mérite un encadrement rigoureux, une écoute attentive, un soutien constant.</p>
+                </div>
+                <div class="value-item">
+                  <i class="fas fa-leaf"></i>
+                  <h4>Technologies Naturelles</h4>
+                  <p>Protocoles avec des technologies 100% naturelles, maîtrisées, et toujours pilotées par une équipe qualifiée, formée en continu.</p>
+                </div>
+                <div class="value-item">
+                  <i class="fas fa-heart"></i>
+                  <h4>Accompagnement Humain</h4>
+                  <p>Chez Vitalia, vous n'êtes jamais seul : un coaching bienveillant, une présence à chaque étape, une attention de chaque instant.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="vitalia-mission">
+              <blockquote>
+                <p>
+                  "Vitalia, c'est l'alliance de la science, de l'écoute et du soin. Pour que mincir devienne un chemin de reconnexion avec soi-même, en toute confiance."
+                </p>
+                <cite>Dr Anis Jday, Fondateur</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Commencez votre transformation avec notre équipe</h2>
+            <p>
+              Prenez rendez-vous pour une consultation personnalisée avec le Dr Anis Jday
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-primary"
+                >Prendre rendez-vous</a
+              >
+              <a href="services.html" class="btn btn-secondary"
+                >Découvrir nos points forts</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="assets/logo.png" alt="Vitalia Logo" />
+            </div>
+            <p>
+              Centre d'amincissement médicalisé dirigé par le Docteur Anis Jday.
+              Votre bien-être, notre expertise.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-nav">
+              <h4>Navigation</h4>
+              <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos points forts</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="testimonials.html">Témoignages</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-contact">
+              <h4>Contact</h4>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+216 71 719 065</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+216 58 285 858</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>vitalia.jday@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Lun-Ven: 8h-18h, Sam: 8h-13h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Vitalia. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
