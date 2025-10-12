@@ -1,0 +1,550 @@
+/*
+* Vitalia - Centre d'Amincissement
+* Améliorations de l'espacement latéral
+* Version: 1.0
+* Description: Améliore les marges à droite et à gauche sur tout le site pour une meilleure esthétique
+*/
+
+/* ===== VARIABLES D'ESPACEMENT AMÉLIORÉES ===== */
+:root {
+  /* Nouvelles variables pour l'espacement latéral */
+  --container-padding-mobile: 1.25rem;    /* 20px */
+  --container-padding-tablet: 2rem;       /* 32px */
+  --container-padding-desktop: 2.5rem;    /* 40px */
+  --container-padding-large: 3rem;        /* 48px */
+
+  /* Marges pour les sections */
+  --section-margin-mobile: 1rem;          /* 16px */
+  --section-margin-tablet: 1.5rem;        /* 24px */
+  --section-margin-desktop: 2rem;         /* 32px */
+  --section-margin-large: 2.5rem;         /* 40px */
+
+  /* Espacement spécifique mobile */
+  --mobile-content-padding: 0.75rem;      /* 12px */
+  --mobile-card-margin: 0.5rem;           /* 8px */
+}
+
+/* ===== AMÉLIORATIONS SPÉCIFIQUES MOBILE ===== */
+
+/* Mobile très petit (320px - 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  /* Réduction de l'espacement pour les très petits écrans */
+  .service-card,
+  .pricing-card,
+  .team-member,
+  .value-card,
+  .facility-card,
+  .certificate-card,
+  .info-card,
+  .appointment-option,
+  .share-option,
+  .post-card {
+    margin-left: var(--mobile-card-margin);
+    margin-right: var(--mobile-card-margin);
+  }
+
+  /* Contenu des sections */
+  .hero-content,
+  .section-header,
+  .about-text,
+  .testimonial-content {
+    padding-left: var(--mobile-content-padding);
+    padding-right: var(--mobile-content-padding);
+  }
+
+  /* Boutons et éléments interactifs */
+  .btn,
+  .hero-buttons a,
+  .cta-buttons a {
+    margin-left: var(--mobile-card-margin);
+    margin-right: var(--mobile-card-margin);
+  }
+}
+
+/* Mobile standard (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  /* Espacement normal pour mobile standard */
+  .service-card,
+  .pricing-card,
+  .team-member,
+  .value-card,
+  .facility-card,
+  .certificate-card,
+  .info-card,
+  .appointment-option,
+  .share-option,
+  .post-card {
+    margin-left: var(--section-margin-mobile);
+    margin-right: var(--section-margin-mobile);
+  }
+}
+
+/* ===== AMÉLIORATION DU CONTAINER PRINCIPAL ===== */
+.container {
+  /* Amélioration du padding latéral par défaut */
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+/* ===== ESPACEMENT POUR LES SECTIONS PRINCIPALES ===== */
+
+/* Hero Section */
+#hero .container,
+.hero-section .container {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+/* Sections de contenu */
+#home-services .container,
+#about-preview .container,
+#expert-section .container,
+#home-testimonials .container,
+#transformations .container,
+#cta .container,
+#services-intro .container,
+#service-details .container,
+#before-after .container,
+#pricing .container,
+#our-story .container,
+#our-values .container,
+#our-team .container,
+#our-facilities .container,
+#faq .container,
+#certificates .container,
+#testimonial-overview .container,
+#featured-testimonials .container,
+#client-reviews .container,
+#share-story .container,
+#contact-info .container,
+#contact-section .container,
+#book-appointment .container,
+#contact-faq .container,
+#blog-categories .container,
+#featured-article .container,
+#blog-grid .container {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+/* Page Banner */
+#page-banner .container {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+/* Footer */
+#footer .container {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+/* ===== AMÉLIORATION DES CARTES ET ÉLÉMENTS ===== */
+
+/* Cartes de services */
+.service-card,
+.pricing-card,
+.team-member,
+.value-card,
+.facility-card,
+.certificate-card,
+.info-card,
+.appointment-option,
+.share-option,
+.post-card {
+  margin-left: var(--section-margin-mobile);
+  margin-right: var(--section-margin-mobile);
+}
+
+/* Grilles */
+.services-grid,
+.pricing-grid,
+.team-grid,
+.values-grid,
+.facilities-grid,
+.certificates-grid,
+.info-cards,
+.appointment-options,
+.share-options,
+.posts-grid {
+  padding-left: var(--section-margin-mobile);
+  padding-right: var(--section-margin-mobile);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablettes (768px et plus) */
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+  
+  /* Sections */
+  #hero .container,
+  .hero-section .container,
+  #home-services .container,
+  #about-preview .container,
+  #expert-section .container,
+  #home-testimonials .container,
+  #transformations .container,
+  #cta .container,
+  #services-intro .container,
+  #service-details .container,
+  #before-after .container,
+  #pricing .container,
+  #our-story .container,
+  #our-values .container,
+  #our-team .container,
+  #our-facilities .container,
+  #faq .container,
+  #certificates .container,
+  #testimonial-overview .container,
+  #featured-testimonials .container,
+  #client-reviews .container,
+  #share-story .container,
+  #contact-info .container,
+  #contact-section .container,
+  #book-appointment .container,
+  #contact-faq .container,
+  #blog-categories .container,
+  #featured-article .container,
+  #blog-grid .container,
+  #page-banner .container,
+  #footer .container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+  
+  /* Cartes et éléments */
+  .service-card,
+  .pricing-card,
+  .team-member,
+  .value-card,
+  .facility-card,
+  .certificate-card,
+  .info-card,
+  .appointment-option,
+  .share-option,
+  .post-card {
+    margin-left: var(--section-margin-tablet);
+    margin-right: var(--section-margin-tablet);
+  }
+  
+  .services-grid,
+  .pricing-grid,
+  .team-grid,
+  .values-grid,
+  .facilities-grid,
+  .certificates-grid,
+  .info-cards,
+  .appointment-options,
+  .share-options,
+  .posts-grid {
+    padding-left: var(--section-margin-tablet);
+    padding-right: var(--section-margin-tablet);
+  }
+}
+
+/* Desktop (992px et plus) */
+@media (min-width: 992px) {
+  .container {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+  
+  /* Sections */
+  #hero .container,
+  .hero-section .container,
+  #home-services .container,
+  #about-preview .container,
+  #expert-section .container,
+  #home-testimonials .container,
+  #transformations .container,
+  #cta .container,
+  #services-intro .container,
+  #service-details .container,
+  #before-after .container,
+  #pricing .container,
+  #our-story .container,
+  #our-values .container,
+  #our-team .container,
+  #our-facilities .container,
+  #faq .container,
+  #certificates .container,
+  #testimonial-overview .container,
+  #featured-testimonials .container,
+  #client-reviews .container,
+  #share-story .container,
+  #contact-info .container,
+  #contact-section .container,
+  #book-appointment .container,
+  #contact-faq .container,
+  #blog-categories .container,
+  #featured-article .container,
+  #blog-grid .container,
+  #page-banner .container,
+  #footer .container {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+  
+  /* Réinitialiser les marges des cartes sur desktop car le container a plus d'espace */
+  .service-card,
+  .pricing-card,
+  .team-member,
+  .value-card,
+  .facility-card,
+  .certificate-card,
+  .info-card,
+  .appointment-option,
+  .share-option,
+  .post-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .services-grid,
+  .pricing-grid,
+  .team-grid,
+  .values-grid,
+  .facilities-grid,
+  .certificates-grid,
+  .info-cards,
+  .appointment-options,
+  .share-options,
+  .posts-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Large Desktop (1200px et plus) */
+@media (min-width: 1200px) {
+  .container {
+    padding-left: var(--container-padding-large);
+    padding-right: var(--container-padding-large);
+  }
+  
+  /* Sections */
+  #hero .container,
+  .hero-section .container,
+  #home-services .container,
+  #about-preview .container,
+  #expert-section .container,
+  #home-testimonials .container,
+  #transformations .container,
+  #cta .container,
+  #services-intro .container,
+  #service-details .container,
+  #before-after .container,
+  #pricing .container,
+  #our-story .container,
+  #our-values .container,
+  #our-team .container,
+  #our-facilities .container,
+  #faq .container,
+  #certificates .container,
+  #testimonial-overview .container,
+  #featured-testimonials .container,
+  #client-reviews .container,
+  #share-story .container,
+  #contact-info .container,
+  #contact-section .container,
+  #book-appointment .container,
+  #contact-faq .container,
+  #blog-categories .container,
+  #featured-article .container,
+  #blog-grid .container,
+  #page-banner .container,
+  #footer .container {
+    padding-left: var(--container-padding-large);
+    padding-right: var(--container-padding-large);
+  }
+}
+
+/* ===== AMÉLIORATION SPÉCIFIQUE POUR LE HEADER ===== */
+#header .container {
+  padding-left: var(--container-padding-mobile);
+  padding-right: var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  #header .container {
+    padding-left: var(--container-padding-tablet);
+    padding-right: var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  #header .container {
+    padding-left: var(--container-padding-desktop);
+    padding-right: var(--container-padding-desktop);
+  }
+}
+
+@media (min-width: 1200px) {
+  #header .container {
+    padding-left: var(--container-padding-large);
+    padding-right: var(--container-padding-large);
+  }
+}
+
+/* ===== AMÉLIORATION POUR LES FORMULAIRES ===== */
+.contact-form-container,
+.contact-map-container {
+  margin-left: var(--section-margin-mobile);
+  margin-right: var(--section-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .contact-form-container,
+  .contact-map-container {
+    margin-left: var(--section-margin-tablet);
+    margin-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-form-container,
+  .contact-map-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ===== AMÉLIORATION SPÉCIFIQUE POUR LES SECTIONS HERO ===== */
+.hero-content,
+.hero-image {
+  padding-left: var(--section-margin-mobile);
+  padding-right: var(--section-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .hero-content,
+  .hero-image {
+    padding-left: var(--section-margin-tablet);
+    padding-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content,
+  .hero-image {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ===== AMÉLIORATION POUR LES TÉMOIGNAGES ===== */
+.testimonial-slider,
+.testimonial-content {
+  margin-left: var(--section-margin-mobile);
+  margin-right: var(--section-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .testimonial-slider,
+  .testimonial-content {
+    margin-left: var(--section-margin-tablet);
+    margin-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-slider,
+  .testimonial-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ===== AMÉLIORATION POUR LES SECTIONS DE CONTENU ===== */
+.section-header {
+  padding-left: var(--section-margin-mobile);
+  padding-right: var(--section-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .section-header {
+    padding-left: var(--section-margin-tablet);
+    padding-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .section-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ===== AMÉLIORATION POUR LES ÉLÉMENTS DE NAVIGATION ===== */
+
+/* Navigation mobile améliorée */
+@media (max-width: 767px) {
+  .nav-menu {
+    padding-left: var(--container-padding-mobile);
+    padding-right: var(--container-padding-mobile);
+  }
+
+  .nav-menu li {
+    margin-left: var(--mobile-card-margin);
+    margin-right: var(--mobile-card-margin);
+  }
+
+  .nav-menu a {
+    padding-left: var(--section-margin-mobile);
+    padding-right: var(--section-margin-mobile);
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    padding-left: var(--section-margin-tablet);
+    padding-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ===== AMÉLIORATION POUR LES BOUTONS CTA ===== */
+.cta-content,
+.cta-buttons,
+.hero-buttons {
+  padding-left: var(--section-margin-mobile);
+  padding-right: var(--section-margin-mobile);
+}
+
+@media (min-width: 768px) {
+  .cta-content,
+  .cta-buttons,
+  .hero-buttons {
+    padding-left: var(--section-margin-tablet);
+    padding-right: var(--section-margin-tablet);
+  }
+}
+
+@media (min-width: 992px) {
+  .cta-content,
+  .cta-buttons,
+  .hero-buttons {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

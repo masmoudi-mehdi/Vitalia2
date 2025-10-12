@@ -44,7 +44,7 @@ Toutes les pages du site Vitalia ont maintenant **la même navbar standardisée*
       <ul class="nav-menu" id="nav-menu" role="navigation" aria-label="Menu principal">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">À propos</a></li>
+        <!-- <li><a href="about.html">À propos</a></li> -->
         <li><a href="testimonials.html">Témoignages</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>

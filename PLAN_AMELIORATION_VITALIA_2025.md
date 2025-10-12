@@ -69,7 +69,7 @@ Ce plan d'action détaille les améliorations à apporter au site Vitalia basée
 ### 3. MISE À JOUR DES SERVICES ET CURES
 
 #### 3.1 Renommage des sections
-- [ ] "Nos spécialisations" → "**Nos cures Vitalia**"
+- [ ] "Nos cures Vitalia" → "**Nos cures Vitalia**"
 - [ ] Mise à jour de tous les liens et références
 
 #### 3.2 Les 6 cures Vitalia

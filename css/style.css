@@ -59,6 +59,9 @@
   --container-max-width: 1200px;
   --container-padding: 1rem;
 
+  /* Espacement latéral amélioré */
+  --container-padding-enhanced: 1.25rem;
+
   /* Typographie */
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Playfair Display", serif;
@@ -165,7 +168,8 @@ svg {
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 var(--container-padding);
+  padding: 0 var(--container-padding-enhanced);
+  /* Amélioration de l'espacement latéral pour une meilleure esthétique */
 }
 
 .text-center {

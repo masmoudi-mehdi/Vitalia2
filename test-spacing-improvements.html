@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Améliorations Espacement Vitalia</title>
+    
+    <!-- CSS de base -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/mobile-accessibility-2025.css" />
+    <link rel="stylesheet" href="css/navbar-emergency-fix.css" />
+    <!-- AMÉLIORATION ESPACEMENT 2025 - Marges latérales améliorées -->
+    <link rel="stylesheet" href="css/spacing-improvements.css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        /* Styles de test pour visualiser les améliorations */
+        .test-section {
+            background-color: rgba(78, 166, 133, 0.1);
+            border: 2px dashed var(--primary-color);
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .test-label {
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .spacing-indicator {
+            background-color: rgba(255, 107, 107, 0.3);
+            border-left: 3px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .before, .after {
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .before {
+            background-color: rgba(220, 53, 69, 0.1);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+        
+        .after {
+            background-color: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Vitalia Logo" />
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos points forts</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                    <li><a href="testimonials.html">Témoignages</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section id="page-banner">
+        <div class="container test-section">
+            <span class="test-label">Header avec espacement amélioré</span>
+            <h1>Test des Améliorations d'Espacement</h1>
+            <p>Cette page teste les nouvelles marges latérales pour une meilleure esthétique</p>
+        </div>
+    </section>
+
+    <!-- Test Container -->
+    <section style="padding: 3rem 0;">
+        <div class="container test-section">
+            <span class="test-label">Container principal</span>
+            <div class="section-header">
+                <h2>Améliorations de l'Espacement Latéral</h2>
+                <p>Voici un aperçu des améliorations apportées à l'espacement du site Vitalia</p>
+            </div>
+            
+            <div class="spacing-indicator">
+                <h3><i class="fas fa-info-circle"></i> Améliorations Appliquées</h3>
+                <ul>
+                    <li><strong>Mobile (320-767px):</strong> Padding 20px (1.25rem)</li>
+                    <li><strong>Tablette (768-991px):</strong> Padding 32px (2rem)</li>
+                    <li><strong>Desktop (992-1199px):</strong> Padding 40px (2.5rem)</li>
+                    <li><strong>Large Desktop (1200px+):</strong> Padding 48px (3rem)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Services Grid -->
+    <section style="padding: 3rem 0; background-color: var(--light-gray);">
+        <div class="container test-section">
+            <span class="test-label">Grille de services</span>
+            <div class="section-header">
+                <h2>Test Grille de Services</h2>
+                <p>Vérification de l'espacement des cartes de services</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3>Service 1</h3>
+                    <p>Description du service avec espacement amélioré</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Service 2</h3>
+                    <p>Description du service avec espacement amélioré</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Service 3</h3>
+                    <p>Description du service avec espacement amélioré</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Hero Section -->
+    <section style="padding: 3rem 0;">
+        <div class="container test-section">
+            <span class="test-label">Section Hero</span>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div class="hero-content" style="flex: 1;">
+                    <h1>Titre Principal</h1>
+                    <p>Contenu de la section hero avec espacement latéral amélioré pour une meilleure lisibilité et esthétique.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Bouton Principal</a>
+                        <a href="#" class="btn btn-outline">Bouton Secondaire</a>
+                    </div>
+                </div>
+                <div class="hero-image" style="flex: 1;">
+                    <div style="background-color: var(--primary-color); height: 200px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+                        Image Hero
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Comparison -->
+    <section style="padding: 3rem 0; background-color: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comparaison Avant/Après</h2>
+                <p>Visualisation des améliorations d'espacement</p>
+            </div>
+            
+            <div class="before-after">
+                <div class="before">
+                    <h3><i class="fas fa-times-circle" style="color: var(--error);"></i> Avant</h3>
+                    <ul>
+                        <li>Espacement latéral fixe de 16px</li>
+                        <li>Contenu trop collé aux bords</li>
+                        <li>Manque d'air sur les grands écrans</li>
+                        <li>Expérience utilisateur dégradée</li>
+                    </ul>
+                </div>
+                <div class="after">
+                    <h3><i class="fas fa-check-circle" style="color: var(--success);"></i> Après</h3>
+                    <ul>
+                        <li>Espacement responsive adaptatif</li>
+                        <li>Marges généreuses et équilibrées</li>
+                        <li>Meilleure utilisation de l'espace</li>
+                        <li>Esthétique professionnelle améliorée</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container test-section">
+            <span class="test-label">Footer avec espacement</span>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Vitalia Logo" />
+                    <h3>Vitalia</h3>
+                    <p>Centre d'amincissement avec espacement amélioré</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="validate-spacing.js"></script>
+
+    <!-- Bouton de test pour les développeurs -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+        <button onclick="VitaliaSpacingValidator.validate()"
+                style="background: var(--primary-color); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 5px;">
+            🔍 Valider Espacement
+        </button>
+        <button onclick="VitaliaSpacingValidator.generateReport()"
+                style="background: var(--secondary-color); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; margin: 5px;">
+            📊 Rapport
+        </button>
+    </div>
+</body>
+</html>
