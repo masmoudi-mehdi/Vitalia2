@@ -18,47 +18,221 @@
     <!-- AMÉLIORATION ESPACEMENT 2025 - Marges latérales améliorées -->
     <link rel="stylesheet" href="css/spacing-improvements.css" />
     <style>
-      .cures-conclusion {
-        margin: 3rem 0;
-        padding: 2rem;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        border-radius: 1rem;
-        text-align: center;
-      }
-      .conclusion-text {
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin: 0;
-        line-height: 1.6;
-      }
-      .service-conclusion {
-        font-style: italic;
-        color: var(--text-medium);
-        margin: 1rem 0;
-        font-weight: 500;
+      /* Introduction Section */
+      #services-intro {
+        padding: 3rem 0;
+        background: var(--light-gray);
       }
 
-      .technology-update-notice {
-        background: linear-gradient(135deg, #ff9800, #f57c00);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
+      .intro-text {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .intro-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+      }
+
+      .intro-text h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-top: 2rem;
+      }
+
+      /* Cures Section */
+      #cures-vitalia {
+        padding: 4rem 0;
+      }
+
+      .cure-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition-normal);
+      }
+
+      .cure-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-5px);
+      }
+
+      .cure-header {
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 1rem;
+      }
+
+      .cure-header h2 {
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+        font-family: var(--font-secondary);
+      }
+
+      .cure-tagline {
+        font-size: 1.2rem;
+        color: var(--primary-color);
         font-weight: 500;
+        font-style: italic;
+      }
+
+      .cure-content p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--text-medium);
+        margin-bottom: 1.5rem;
+      }
+
+      /* Machine Image Placeholder */
+      .machine-image-placeholder {
+        background: var(--light-gray);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-left: 4px solid var(--secondary-color);
+      }
+
+      .machine-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--secondary-color);
         margin-bottom: 1rem;
       }
 
-      .technology-update-notice i {
-        animation: spin 2s linear infinite;
+      .image-space {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+      .image-space img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .placeholder-box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        background: white;
+        border: 2px dashed var(--medium-gray);
+        border-radius: 0.5rem;
+        color: var(--text-light);
+      }
+
+      .placeholder-box i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+      }
+
+      .placeholder-box span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .tech-description {
+        font-size: 0.95rem;
+        color: var(--text-medium);
+        font-style: italic;
+        margin-top: 0.75rem;
+        text-align: center;
+      }
+
+      /* Cure Details */
+      .cure-benefit {
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 1.05rem;
+      }
+
+      .cure-description {
+        color: var(--text-dark);
+      }
+
+      .cure-program {
+        background: #fff3e0;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        display: inline-block;
+        font-weight: 500;
+        color: #e65100;
+        margin: 1rem 0;
+      }
+
+      /* Conclusion */
+      .cure-conclusion {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 3rem;
+        border-radius: 1rem;
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      .cure-conclusion h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-family: var(--font-secondary);
+      }
+
+      .cure-conclusion p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .conclusion-highlight {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .cure-card {
+          padding: 1.5rem;
+        }
+
+        .cure-header h2 {
+          font-size: 1.5rem;
+        }
+
+        .cure-tagline {
+          font-size: 1rem;
+        }
+
+        .image-space {
+          min-height: 200px;
+        }
+
+        .placeholder-box {
+          height: 200px;
+        }
+
+        .cure-conclusion {
+          padding: 2rem 1.5rem;
+        }
+
+        .cure-conclusion h3 {
+          font-size: 1.4rem;
+        }
       }
     </style>
     <!-- Font Awesome -->
@@ -91,12 +265,10 @@
             role="navigation"
             aria-label="Menu principal"
           >
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" >Accueil</a></li>
             <li><a href="services.html" class="active">Nos points forts</a></li>
-            <!-- <li><a href="about.html">À propos</a></li> -->
             <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
-            <li><a href="testimonials.html">Témoignages</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="dr-anis-jday.html">Docteur Anis Jday</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <button
@@ -116,619 +288,224 @@
     <main id="main-content">
       <section id="page-banner">
         <div class="container">
-          <h1>Nos Points Forts</h1>
-          <p>
-            Des solutions d'amincissement sur mesure pour des résultats durables
-          </p>
+          <h1>Les Cures Vitalia</h1>
+          <p>Amincissement Médicalisé et Beauté du Corps</p>
         </div>
       </section>
 
-      <!-- Points Forts Introduction -->
+      <!-- Introduction -->
       <section id="services-intro">
         <div class="container">
-          <div class="section-header">
-            <h2>Solutions professionnelles d'amincissement</h2>
+          <div class="intro-text">
             <p>
-              Chez Vitalia, nous proposons une gamme complète de points forts pour
-              vous aider à atteindre vos objectifs de bien-être et de forme
-              physique
+              Chez Vitalia, chaque cure est conçue sur mesure à partir d'un bilan médical complet.
+              Nos 19 ans d'expérience nous permettent d'associer technologies avancées et suivi pluridisciplinaire
+              (médecin, opératrice, coach, psychologue, prof de sport) pour des résultats sûrs, visibles et durables.
             </p>
-          </div>
-          <div class="services-approach">
-            <div class="approach-item">
-              <div class="approach-icon">
-                <i class="fas fa-user-check"></i>
-              </div>
-              <h3>Approche personnalisée</h3>
-              <p>
-                Chaque programme est adapté à vos besoins, votre morphologie et
-                vos objectifs spécifiques
-              </p>
-            </div>
-            <div class="approach-item">
-              <div class="approach-icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <h3>Méthodes éprouvées</h3>
-              <p>
-                Nos techniques sont validées scientifiquement pour des résultats
-                visibles et durables
-              </p>
-            </div>
-            <div class="approach-item">
-              <div class="approach-icon">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3>Équipe de professionnels</h3>
-              <p>
-                Nos experts sont formés aux dernières techniques d'amincissement
-                et de bien-être
-              </p>
-            </div>
+            <h3>Découvrez nos cures signatures 👇</h3>
           </div>
         </div>
       </section>
 
-      <!-- Nos cures Vitalia -->
-      <section id="specialisations">
-        <div class="container">
-          <div class="section-header">
-            <h2>Nos cures Vitalia</h2>
-            <p>
-              Une expertise complète pour répondre à tous vos besoins
-              esthétiques et de bien-être
-            </p>
-          </div>
-
-          <div class="specialisations-grid">
-            <div class="specialisation-card">
-              <div class="specialisation-icon">
-                <i class="fas fa-hand-holding-heart"></i>
-              </div>
-              <h3>Rides et vieillissement cutané</h3>
-              <p>
-                Traitement des signes de l'âge et amélioration de la qualité de
-                la peau grâce à des techniques ciblées et non-invasives.
-              </p>
-            </div>
-
-            <div class="specialisation-card">
-              <div class="specialisation-icon">
-                <i class="fas fa-child"></i>
-              </div>
-              <h3>Tonification du visage et du corps</h3>
-              <p>
-                Programmes de raffermissement pour retrouver une silhouette
-                tonique et des contours du visage plus définis.
-              </p>
-            </div>
-
-            <div class="specialisation-card">
-              <div class="specialisation-icon">
-                <i class="fas fa-weight-scale"></i>
-              </div>
-              <h3>Reprise de forme et perte de poids localisée</h3>
-              <p>
-                Solutions ciblées pour éliminer les graisses résistantes et
-                remodeler efficacement votre silhouette.
-              </p>
-            </div>
-
-            <div class="specialisation-card">
-              <div class="specialisation-icon">
-                <i class="fas fa-spa"></i>
-              </div>
-              <h3>Récupération d'énergie et bien-être</h3>
-              <p>
-                Soins holistiques pour revitaliser votre corps et votre esprit,
-                et améliorer votre bien-être général.
-              </p>
-            </div>
-
-            <div class="specialisation-card">
-              <div class="specialisation-icon">
-                <i class="fas fa-droplet"></i>
-              </div>
-              <h3>Cellulite et rétention d'eau</h3>
-              <p>
-                Traitements spécifiques pour combattre la cellulite et éliminer
-                l'eau superflue pour une peau plus lisse.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Technologies Avancées -->
-      <section id="technologies">
-        <div class="container">
-          <div class="section-header">
-            <h2>Nos Technologies de Pointe</h2>
-            <p>
-              Des équipements de dernière génération pour des résultats rapides
-              et durables
-            </p>
-          </div>
-
-          <div class="technologies-showcase">
-            <!-- Cellu M6 -->
-            <div class="technology-item">
-              <div class="technology-content">
-                <h3>Cellu M6 - La Référence en Endermologie</h3>
-                <div class="technology-update-notice">
-                  <i class="fas fa-sync-alt"></i>
-                  <span>Mise à jour en cours - Nouvelle photo prochainement</span>
-                </div>
-                <p>
-                  Le Cellu M6 est un appareil de haute technologie mondialement
-                  reconnu pour l'endermologie, une technique non invasive qui
-                  permet de traiter efficacement la cellulite, le relâchement
-                  cutané et la rétention d'eau.
-                </p>
-
-                <div class="technology-benefits">
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Remodelage Corporel</h4>
-                    <p>
-                      Redessine votre silhouette en ciblant précisément les
-                      zones à traiter
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Raffermissement Cutané</h4>
-                    <p>
-                      Stimule la production de collagène pour une peau plus
-                      ferme et tonique
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Drainage Lymphatique</h4>
-                    <p>
-                      Favorise l'élimination des toxines et réduit la rétention
-                      d'eau
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Anti-Âge</h4>
-                    <p>
-                      Traitement du visage pour atténuer les rides et redonner
-                      de l'éclat
-                    </p>
-                  </div>
-                </div>
-
-                <div class="technology-note">
-                  <p>
-                    Le Cellu M6 utilise des rouleaux motorisés associés à une
-                    aspiration pour masser et stimuler en profondeur les
-                    cellules de la peau, relançant ainsi leurs fonctions
-                    naturelles. Chaque séance est personnalisée selon vos
-                    besoins spécifiques.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="assets/technologies/cellu-m6.jpg"
-                alt="Cellu M6"
-                class="technology-image"
-              />
-            </div>
-
-            <!-- Cellutrim 954 -->
-            <div class="technology-item reverse">
-              <div class="technology-content">
-                <h3>OMEOENERGETICA Cellutrim 954 - La Solution Innovante</h3>
-                <div class="technology-update-notice">
-                  <i class="fas fa-tools"></i>
-                  <span>Modifications en cours selon nouvelles spécifications</span>
-                </div>
-                <p>
-                  Le Cellutrim 954 est notre technologie la plus avancée, conçue
-                  pour améliorer la circulation sanguine et lymphatique et
-                  activer les processus de réparation endogènes naturellement.
-                  Particulièrement efficace lorsque d'autres méthodes échouent.
-                </p>
-
-                <div class="technology-benefits">
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Remodelage Corporel Complet</h4>
-                    <p>
-                      Transformation visible de la silhouette grâce à une action
-                      globale
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Lissage de la Peau</h4>
-                    <p>
-                      Amélioration significative de la texture et de l'aspect de
-                      la peau
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Drainage Efficace</h4>
-                    <p>
-                      Élimination des liquides en excès pour un confort immédiat
-                    </p>
-                  </div>
-                  <div class="benefit">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Réduction de la Graisse Viscérale</h4>
-                    <p>
-                      Action ciblée sur la graisse profonde, difficile à
-                      éliminer
-                    </p>
-                  </div>
-                </div>
-
-                <div class="technology-note">
-                  <p>
-                    Le Cellutrim 954 utilise l'énergie biocompatible pour
-                    induire un mouvement rapide des charges ioniques, stimulant
-                    ainsi le système circulatoire et le métabolisme. Il favorise
-                    l'oxygénation des tissus, augmente l'apport de nutriments et
-                    restaure la structure des fibres du derme.
-                  </p>
-                </div>
-              </div>
-              <img
-                src="assets/technologies/cellutrim-954.jpg"
-                alt="Cellutrim 954"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Nos Cures Vitalia -->
+      <!-- Les Cures -->
       <section id="cures-vitalia">
         <div class="container">
-          <div class="section-header">
-            <h2>Nos Cures Vitalia</h2>
-            <p>Des solutions innovantes et personnalisées pour votre bien-être et votre silhouette</p>
-          </div>
 
           <!-- Cure 1: Vitalia Silhouette Fine -->
-          <div id="silhouette-fine" class="service-item">
-            <div class="service-image">
-              <i class="fas fa-magic service-big-icon"></i>
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>🌸 Vitalia Silhouette Fine</h2>
+              <p class="cure-tagline">Sculptez, drainez, lissez.</p>
             </div>
-            <div class="service-content">
-              <h2>Vitalia Silhouette Fine</h2>
-              <p>
-                La cure Vitalia Silhouette Fine est une approche complète pour affiner la silhouette et améliorer l'aspect de la peau. Elle cible trois axes fondamentaux :
-              </p>
+            <div class="cure-content">
+              <p>Une cure complète pour affiner la silhouette et sublimer la peau.</p>
 
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Raffinement cutané</h4>
-                  <p>
-                    Grâce à des techniques avancées, cette cure améliore la texture de la peau, la rendant plus lisse et plus ferme.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Réduction de la graisse localisée</h4>
-                  <p>
-                    Elle agit spécifiquement sur les amas graisseux au niveau du ventre, des hanches, des cuisses, des flancs et du dos.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Drainage du corps</h4>
-                  <p>
-                    En stimulant la circulation et l'élimination des toxines, cette cure favorise un dégonflement général et un bien-être accru.
-                  </p>
+              <!-- Espace pour image machine -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Technologie LPG Endermalab</div>
+                <div class="image-space">
+                  <img src="assets/technologies/Technologie LPG Endermalab.webp" alt="LPG Endermalab">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image LPG Endermalab</span>
+                  </div>
                 </div>
               </div>
 
-              <p class="service-conclusion">
-                Cette cure est idéale pour celles et ceux qui souhaitent un remodelage global, en alliant amincissement et amélioration de la qualité de la peau.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
+              <p class="cure-benefit">👉 Idéale pour lisser la peau et redonner harmonie à la silhouette.</p>
+              <p class="cure-description">Active le collagène, stimule le drainage et redéfinit les contours du corps.</p>
             </div>
           </div>
 
-          <!-- Cure 2: Vitalia Brûle Graisse Localisée -->
-          <div id="brule-graisse" class="service-item reverse">
-            <div class="service-content">
-              <h2>Vitalia Brûle Graisse Localisée</h2>
-              <p>
-                La cure Vitalia Brûle Graisse Localisée est spécifiquement conçue pour cibler les zones les plus récalcitrantes à la perte de graisse. Elle se concentre sur les hanches, les cuisses, le ventre, les bras et la poitrine chez les hommes.
-              </p>
+          <!-- Cure 2: Vitalia Peau Lisse -->
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>🍑 Vitalia Peau Lisse</h2>
+              <p class="cure-tagline">Adieu cellulite, bonjour peau soyeuse.</p>
+            </div>
+            <div class="cure-content">
+              <p>Cette cure cible la cellulite et la graisse localisée tout en raffermissant la peau.</p>
 
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Lipocriolyse</h4>
-                  <p>Technique qui utilise le froid pour éliminer les cellules graisseuses de manière naturelle et durable.</p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Technologies I-Shape et I-Model</h4>
-                  <p>
-                    Technologies innovantes qui optimisent le remodelage corporel et accélèrent la fonte des graisses.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Élimination des graisses profondes</h4>
-                  <p>
-                    Combinaison efficace de technologies avancées pour cibler les zones résistantes.
-                  </p>
+              <!-- Espace pour image machine -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Technologie Omeoenergitica</div>
+                <div class="image-space">
+                  <img src="assets/technologies/echnologie Omeoenergitica.svg" alt="Omeoenergitica">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image Omeoenergitica</span>
+                  </div>
                 </div>
               </div>
 
-              <p class="service-conclusion">
-                Cette cure est idéale pour celles et ceux qui veulent une solution efficace et ciblée pour réduire des zones spécifiques de graisse résistante.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
-            </div>
-            <div class="service-image">
-              <i class="fas fa-fire service-big-icon"></i>
+              <p class="cure-description">Lisse, sculpte et tonifie la peau.</p>
+              <p class="cure-program">📅 Programme : 6 séances</p>
             </div>
           </div>
 
-          <!-- Cure 3: Vitalia Peau Lisse -->
-          <div id="peau-lisse" class="service-item">
-            <div class="service-image">
-              <i class="fas fa-hand-sparkles service-big-icon"></i>
+          <!-- Cure 3: Vitalia Brûle Graisse Localisée -->
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>🔥 Vitalia Brûle Graisse Localisée</h2>
+              <p class="cure-tagline">L'arme contre la graisse rebelle.</p>
             </div>
-            <div class="service-content">
-              <h2>Vitalia Peau Lisse</h2>
-              <p>
-                La cure Vitalia Peau Lisse est dédiée à celles et ceux qui veulent améliorer l'aspect de leur peau tout en affinant leur silhouette.
-              </p>
+            <div class="cure-content">
+              <p>Une combinaison redoutable pour les zones résistantes : ventre, hanches, cuisses, bras, dos.</p>
 
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Peau d'orange et cellulite</h4>
-                  <p>
-                    En lissant les capitons et en améliorant l'élasticité de la peau.
-                  </p>
+              <!-- Espace pour images machines -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 LipoCryolyse</div>
+                <div class="image-space">
+                  <img src="assets/technologies/LipoCryolyse.jpeg" alt="LipoCryolyse">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image LipoCryolyse</span>
+                  </div>
                 </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Drainage du corps</h4>
-                  <p>
-                    Pour éliminer les toxines et réduire la rétention d'eau.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Remodelage de la silhouette</h4>
-                  <p>
-                    Pour harmoniser les contours du corps.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Technologie LPG Cellum 6</h4>
-                  <p>
-                    Une technologie reconnue pour son efficacité dans la lutte contre la cellulite et l'amélioration de la texture cutanée.
-                  </p>
-                </div>
+                <p class="tech-description">Destruction du tissu graisseux par le froid</p>
               </div>
 
-              <p class="service-conclusion">
-                C'est la solution parfaite pour retrouver une peau plus ferme, plus lisse et une silhouette redessinée.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
-            </div>
-          </div>
-
-          <!-- Cure 4: Vitalia Renforcement Musculaire -->
-          <div id="renforcement-musculaire" class="service-item reverse">
-            <div class="service-content">
-              <h2>Vitalia Renforcement Musculaire</h2>
-              <p>
-                Après une perte de poids ou une cure minceur, il est essentiel de renforcer les muscles pour préserver les résultats obtenus. La cure Vitalia Renforcement Musculaire répond à ce besoin.
-              </p>
-
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Raffermissement de la silhouette</h4>
-                  <p>
-                    En tonifiant la peau et les muscles pour un effet sculpté.
-                  </p>
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 LPG Cellum6</div>
+                <div class="image-space">
+                  <img src="assets/technologies/endermolab cellu m6.webp" alt="LPG Cellum6">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image LPG Cellum6</span>
+                  </div>
                 </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Renforcement musculaire</h4>
-                  <p>
-                    Pour une silhouette plus ferme et un corps plus fort.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Prévention du relâchement post-régime</h4>
-                  <p>
-                    Essentiel pour éviter l'affaissement des tissus après une perte de poids.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Technologies I-Shape et I-Model (EMS)</h4>
-                  <p>
-                    Basées sur l'électro-stimulation musculaire. Le travail se fait en position statique et allongée, permettant une stimulation intense et efficace des muscles sans effort.
-                  </p>
-                </div>
+                <p class="tech-description">Drainage et lissage</p>
               </div>
 
-              <p class="service-conclusion">
-                Cette cure est idéale pour retrouver un corps tonique et sculpté en toute sérénité.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
-            </div>
-            <div class="service-image">
-              <i class="fas fa-dumbbell service-big-icon"></i>
+              <p class="cure-program">📅 1 séance de Cryo + 6 séances de Cellulitis</p>
+              <p class="cure-benefit">👉 Résultat : une silhouette affinée et redessinée.</p>
             </div>
           </div>
 
-          <!-- Cure 5: Vitalia Omeoenergetica -->
-          <div id="omeoenergetica" class="service-item">
-            <div class="service-image">
-              <i class="fas fa-leaf service-big-icon"></i>
+          <!-- Cure 4: Vitalia Peau Ferme -->
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>💫 Vitalia Peau Ferme</h2>
+              <p class="cure-tagline">Raffermir, retendre, régénérer.</p>
             </div>
-            <div class="service-content">
-              <h2>Vitalia Omeoenergetica</h2>
-              <p>
-                Découvrez Omeoenergetica, une technologie de pointe qui agit simultanément sur la graisse localisée, la rétention d'eau et le relâchement cutané. Ce nouvel appareil associe efficacité et douceur dans un concept sain, naturel et profondément relaxant.
-              </p>
+            <div class="cure-content">
+              <p>Une cure anti-relâchement intensif pour une peau plus tonique et élastique.</p>
 
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Action sur la cause du stockage graisseux</h4>
-                  <p>
-                    Stimule les mécanismes naturels de combustion des graisses au lieu de traiter seulement les symptômes.
-                  </p>
+              <!-- Espace pour images machines -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Omeoenergitica</div>
+                <div class="image-space">
+                  <img src="assets/technologies/Omeoenergitica2.png" alt="Omeoenergitica">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image Omeoenergitica</span>
+                  </div>
                 </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Drainage et circulation</h4>
-                  <p>
-                    Favorise le drainage, améliore la circulation et renforce la fermeté des tissus.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Approche globale et naturelle</h4>
-                  <p>
-                    Concept sain, naturel et profondément relaxant qui s'intègre parfaitement à un protocole médicalisé.
-                  </p>
-                </div>
+                <p class="tech-description">Stimule la production de collagène</p>
               </div>
 
-              <p class="service-conclusion">
-                Une expérience unique pour affiner, tonifier et rééquilibrer le corps en profondeur.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
-            </div>
-          </div>
-
-          <!-- Cure 6: Vitalia Épilation -->
-          <div id="epilation" class="service-item reverse">
-            <div class="service-content">
-              <h2>Vitalia Épilation</h2>
-              <p>
-                La cure Vitalia Épilation offre une épilation durable à l'efficacité garantie, pensée pour s'adapter à tous les phototypes et à toutes les zones du corps, sans exception.
-              </p>
-
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Efficacité pour tous les phototypes</h4>
-                  <p>
-                    Approche 100% inclusive, adaptée à tous les types de peau et toutes les demandes.
-                  </p>
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Tesla</div>
+                <div class="image-space">
+                  <img src="assets/technologies/Tesla.jpg" alt="Tesla">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image Tesla</span>
+                  </div>
                 </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Technologies de dernière génération</h4>
-                  <p>
-                    Lasers de dernière génération d'ingénierie italienne et lumière pulsée optimisée.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Résultats rapides et sûrs</h4>
-                  <p>
-                    Protocoles conçus pour conjuguer précision, confort et performance.
-                  </p>
-                </div>
+                <p class="tech-description">Renforce la tonicité musculaire</p>
               </div>
 
-              <p class="service-conclusion">
-                L'efficacité au service de tous les phototypes pour des résultats rapides, visibles et sûrs.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
-            </div>
-            <div class="service-image">
-              <i class="fas fa-laser-pointer service-big-icon"></i>
+              <p class="cure-program">📅 8 séances d'Opno + 4 séances de Tesla</p>
+              <p class="cure-benefit">👉 Résultat : une peau ferme, dense et éclatante.</p>
             </div>
           </div>
 
-          <!-- Cure 7: Vitalia Double-Menton -->
-          <div id="double-menton" class="service-item">
-            <div class="service-image">
-              <i class="fas fa-user-check service-big-icon"></i>
+          <!-- Cure 5: Vitalia Renforcement Musculaire -->
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>💪 Vitalia Renforcement Musculaire</h2>
+              <p class="cure-tagline">Le corps ferme et sculpté, sans effort.</p>
             </div>
-            <div class="service-content">
-              <h2>Vitalia Double-Menton</h2>
-              <p>
-                La cure Vitalia Double-Menton est spécialement conçue pour éliminer l'excès de graisse sous le menton et raffermir la peau du visage. Elle repose sur la technologie HIFU, qui offre une double action.
-              </p>
+            <div class="cure-content">
+              <p>Une cure d'électrostimulation équivalente à 6h de sport par séance.</p>
 
-              <div class="service-features">
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Réduction du double menton</h4>
-                  <p>
-                    En ciblant les cellules graisseuses sous-cutanées pour un effet affinant visible.
-                  </p>
+              <!-- Espace pour image machine -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Technologies I-Shape / I-Model (EMS)</div>
+                <div class="image-space">
+                  <img src="assets/technologies/Technologies I-Shape  I-Model (EMS).webp" alt="I-Shape I-Model">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image I-Shape / I-Model</span>
+                  </div>
                 </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Raffermissement de la peau</h4>
-                  <p>
-                    En stimulant la production de collagène, améliorant ainsi l'élasticité et la fermeté du bas du visage.
-                  </p>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-check-circle"></i>
-                  <h4>Technologie HIFU</h4>
-                  <p>
-                    Ultrasons focalisés de haute intensité pour un traitement précis et non invasif.
-                  </p>
-                </div>
+                <p class="tech-description">Raffermissement, tonification, sculpting global</p>
               </div>
 
-              <p class="service-conclusion">
-                Cette cure est idéale pour celles et ceux qui souhaitent redessiner l'ovale du visage et retrouver une peau plus tonique et plus jeune.
-              </p>
-
-              <a href="contact.html" class="btn btn-primary"
-                >Prendre rendez-vous</a
-              >
+              <p class="cure-program">📅 12 séances (standard) ou 24 séances (intensif)</p>
+              <p class="cure-benefit">👉 Idéale après une perte de poids pour consolider les résultats.</p>
             </div>
           </div>
 
-          <!-- Conclusion des cures -->
-          <div class="cures-conclusion">
-            <div class="section-header">
-              <p class="conclusion-text">
-                Avec ces sept cures, Vitalia propose une approche complète et innovante de la minceur et du bien-être, répondant à des besoins spécifiques pour un corps plus harmonieux et une peau sublimée.
-              </p>
+          <!-- Cure 6: Vitalia Réjuvénation Visage -->
+          <div class="cure-card">
+            <div class="cure-header">
+              <h2>✨ Vitalia Réjuvénation Visage</h2>
+              <p class="cure-tagline">Rajeunir sans bistouri.</p>
+            </div>
+            <div class="cure-content">
+              <p>Une cure exclusive pour raffermir la peau du visage après un régime ou une perte de poids.</p>
+
+              <!-- Espace pour image machine -->
+              <div class="machine-image-placeholder">
+                <div class="machine-name">💠 Technologie Hi-FU</div>
+                <div class="image-space">
+                  <img src="assets/technologies/Hi-Fu.jpg" alt="Hi-FU">
+                  <div class="placeholder-box">
+                    <i class="fas fa-image"></i>
+                    <span>Image Hi-FU</span>
+                  </div>
+                </div>
+                <p class="tech-description">Ultrasons Focalisés Haute Intensité, réalisée par un médecin</p>
+              </div>
+
+              <p class="cure-benefit">👉 Effet lifting immédiat et stimulation naturelle du collagène pour un visage tonique et éclatant.</p>
             </div>
           </div>
+
+          <!-- Conclusion -->
+          <div class="cure-conclusion">
+            <h3>🩺 Une approche médicale et sur mesure</h3>
+            <p>
+              Chez Vitalia, chaque programme commence par une évaluation médicale approfondie.
+              Nous déterminons la combinaison de technologies la plus adaptée à votre corps, vos objectifs et votre santé.
+            </p>
+            <p class="conclusion-highlight">
+              💬 Un suivi constant, une équipe pluridisciplinaire et des méthodes innovantes pour un résultat visible et durable.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -745,9 +522,6 @@
               <a href="contact.html" class="btn btn-primary"
                 >Prendre rendez-vous</a
               >
-              <a href="testimonials.html" class="btn btn-secondary"
-                >Voir les témoignages</a
-              >
             </div>
           </div>
         </div>
@@ -760,7 +534,6 @@
         <div class="footer-top">
           <div class="footer-logo">
             <img src="assets/logo.png" alt="Vitalia Logo" />
-
             <p>Centre d'amincissement professionnel en Tunisie</p>
           </div>
           <div class="footer-links">
@@ -769,8 +542,8 @@
               <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Nos points forts</a></li>
-                <!-- <li><a href="about.html">À propos</a></li> -->
-                <li><a href="testimonials.html">Témoignages</a></li>
+                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="dr-anis-jday.html">Docteur Anis Jday</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
@@ -789,29 +562,22 @@
             <div class="footer-hours">
               <h4>Horaires d'ouverture</h4>
               <ul>
-                <li>Lundi - Vendredi: 09h00 - 19h00</li>
-                <li>Samedi: 09h00 - 16h00</li>
+                <li>Lundi - Vendredi: 08h00 - 19h00</li>
+                <li>Samedi: 08h00 - 16h00</li>
                 <li>Dimanche: Fermé</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
           <div class="copyright">
             <p>
-              &copy; 2023 Vitalia Centre d'Amincissement. Tous droits réservés.
+              &copy; 2025 Vitalia Centre d'Amincissement. Tous droits réservés.
             </p>
           </div>
         </div>
       </div>
     </footer>
-
     <!-- Scripts -->
     <script src="js/main.js"></script>
   </body>
