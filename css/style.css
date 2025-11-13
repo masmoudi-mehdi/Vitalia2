@@ -663,8 +663,16 @@ nav {
   .expert-buttons {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     align-items: center;
+    width: 100%;
+  }
+
+  .expert-buttons .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -675,6 +683,11 @@ nav {
 
   .expert-description p {
     font-size: var(--font-size-sm);
+  }
+
+  .expert-buttons .btn {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
   }
 }
 

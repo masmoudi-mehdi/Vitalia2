@@ -115,19 +115,21 @@
   }
 
   .about-content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: var(--spacing-xl);
   }
 
   .about-text {
     width: 100%;
     text-align: center;
+    order: 1;
   }
 
   .about-stats {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
+    order: 2;
   }
 
   /* CTA Section - Mobile Responsive */
@@ -176,6 +178,29 @@
 
   .appointment-option {
     padding: var(--spacing-lg);
+  }
+
+  /* Home Services Section - Mobile Responsive */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .service-card {
+    padding: var(--spacing-lg);
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .service-card h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .service-card p {
+    font-size: var(--font-size-sm);
   }
 
   /* Footer */
@@ -323,6 +348,24 @@
 
   .cta-content p {
     font-size: 0.9375rem;
+  }
+
+  /* Home Services Section - Small Screens */
+  .service-card {
+    padding: var(--spacing-md);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-card h3 {
+    font-size: var(--font-size-sm);
+  }
+
+  .service-card p {
+    font-size: 0.875rem;
   }
 
   /* Contact Page - Small Screens */
