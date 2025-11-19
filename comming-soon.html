@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Vitalia - Bientôt disponible</title>
+    <!-- AMÉLIORATION ESPACEMENT 2025 - Marges latérales améliorées -->
+    <link rel="stylesheet" href="css/spacing-improvements.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4ea685",
+              secondary: "#3d8bae",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-primary/10 to-secondary/10 min-h-screen flex flex-col"
+  >
+    <main class="flex-grow flex items-center justify-center">
+      <div class="text-center px-4">
+        <div class="mb-8 flex justify-center">
+          <img src="assets/logo.png" alt="Vitalia Logo" class="w-48 md:w-64" />
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Bientôt disponible
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Notre nouveau site est en cours de construction.<br />
+          Nous serons bientôt de retour avec une expérience exceptionnelle.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="tel:71719065"
+            class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-colors"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            Nous appeler
+          </a>
+          <a
+            href="mailto:vitalia.jday@gmail.com"
+            class="bg-white hover:bg-gray-50 text-primary border border-primary px-6 py-3 rounded-lg transition-colors"
+          >
+            <i class="fas fa-envelope mr-2"></i>
+            Nous écrire
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-6 text-center">
+      <div class="space-y-2 text-gray-600">
+        <p class="flex items-center justify-center">
+          <i class="fas fa-phone-alt mr-2 text-primary"></i>
+          <a href="tel:71719065" class="hover:text-primary transition-colors"
+            >+216 71 719 065</a
+          >
+        </p>
+        <p class="flex items-center justify-center">
+          <i class="fas fa-envelope mr-2 text-primary"></i>
+          <a
+            href="mailto:vitalia.jday@gmail.com"
+            class="hover:text-primary transition-colors"
+            >vitalia.jday@gmail.com</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </body>
+</html>

@@ -51,7 +51,7 @@ function initMap() {
   const infoContent = `
         <div style="text-align:center; padding:10px; max-width:200px;">
             <h3 style="margin-top:0; color:#4EA685; font-weight:600; margin-bottom:5px;">Vitalia</h3>
-            <p style="margin:0 0 5px;">48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3eme étage</p>
+            <p style="margin:0 0 5px;">48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3ème étage</p>
             <p style="margin:0 0 5px;"><a href="tel:+21671719065" style="color:#4EA685; text-decoration:none;">+216 71 719 065</a></p>
             <a href="https://maps.google.com/maps?daddr=36.8065,10.1815" target="_blank" style="color:#4EA685; text-decoration:none; font-weight:500;">Obtenir l'itinéraire</a>
         </div>
@@ -258,7 +258,7 @@ function handleMapsError() {
                 <i class="fas fa-map-marker-alt" style="font-size:48px; color:#4EA685; margin-bottom:20px;"></i>
                 <h3>Carte non disponible</h3>
                 <p>Veuillez nous rendre visite à l'adresse :</p>
-                <p><strong>48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3eme étage</strong></p>
+                <p><strong>48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3ème étage</strong></p>
                 <a href="https://maps.google.com/?q=36.8065,10.1815" target="_blank" class="btn btn-primary" style="margin-top:20px;">Voir sur Google Maps</a>
             </div>
         `;

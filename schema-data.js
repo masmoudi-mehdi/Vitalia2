@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     address: {
       "@type": "PostalAddress",
       streetAddress:
-        "48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3eme étage",
+        "48 Avenue Othman Ibn Affen Menzah VIII, Bloc B Medical 3ème étage",
       addressLocality: "Menzah VIII",
       addressRegion: "Tunis",
       postalCode: "2091",
