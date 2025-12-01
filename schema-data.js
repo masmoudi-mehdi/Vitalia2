@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       longitude: "10.1815",
     },
     telephone: "+21671719065",
-    email: "contact@vitalia.tn",
+    email: "minceurj@gmail.com",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
